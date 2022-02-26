@@ -1,4 +1,4 @@
-package com.itheima;
+package com.itheima.sync;
 
 public class SaleTicket {
 
