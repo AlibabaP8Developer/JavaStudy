@@ -4,6 +4,14 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+/**
+ * JDBC 和 java8
+ * 现在 jdbc 时间类型和 java8 时间类型对应关系是
+ *  Date ---> LocalDate
+ *  Time ---> LocalTime
+ *  Timestamp ---> LocalDateTime
+ * 而之前统统对应 Date，也只有 Date
+ */
 public class LocalDateDemo {
 
     public static void main(String[] args) {
