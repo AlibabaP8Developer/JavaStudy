@@ -1,4 +1,4 @@
-package com.itheima;
+package com.itheima.localdate;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class LocalDateFormatDemo {
     /**
      * 日期格式化
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -16,10 +17,11 @@ public class LocalDateFormatDemo {
         // JDK自带的日期时间格式:DateTimeFormatter.ISO_DATE_TIME
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String format = now.format(dtf);
-        System.out.println(format);
+        System.out.println("format：" + format);
 
         // 解析
         LocalDateTime parse = LocalDateTime.parse("2022-02-26 22:51:18", dtf);
-        System.out.println(parse);
+        LocalDateTime parse1 = LocalDateTime.parse(format, dtf);
+        System.out.println("parse1:" + parse1);
     }
 }
