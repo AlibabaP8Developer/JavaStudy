@@ -42,7 +42,12 @@ public class LocalDateZoned {
         System.out.println("America/Toronto：" + now1);
 
         // 修改时区
+        // withZoneSameInstant：更改时区，也更改时间
         ZonedDateTime japan = now1.withZoneSameInstant(ZoneId.of("Japan"));
         System.out.println("japan："+japan);
+
+        // withZoneSameLocal：更改时区
+        ZonedDateTime japan1 = now1.withZoneSameLocal(ZoneId.of("Japan"));
+        System.out.println("japan1："+japan1);
     }
 }
