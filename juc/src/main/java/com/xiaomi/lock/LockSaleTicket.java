@@ -1,6 +1,4 @@
-package com.itheima.lock;
-
-import com.itheima.sync.SaleTicket;
+package com.xiaomi.lock;
 
 import java.util.concurrent.locks.ReentrantLock;
 

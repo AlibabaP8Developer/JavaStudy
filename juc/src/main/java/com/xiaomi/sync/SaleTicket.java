@@ -1,4 +1,4 @@
-package com.itheima.sync;
+package com.xiaomi.sync;
 
 public class SaleTicket {
 
