@@ -3,6 +3,7 @@ package com.xiaomi.localdate;
 import java.time.LocalDateTime;
 import java.time.temporal.Temporal;
 import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 
 /**
  * JDK8时间校正器
@@ -20,7 +21,11 @@ public class TemporalDemo {
             LocalDateTime localDateTime = dateTime.plusMonths(1).withDayOfMonth(1);
             return localDateTime;
         };
+        // JDK中自带了很多时间调整器
+        TemporalAdjuster temporalAdjuster = TemporalAdjusters.firstDayOfMonth();
         LocalDateTime nextDateTime = now.with(firstDayOfNextMonth);
-        System.out.println(nextDateTime);
+        LocalDateTime temporalAdjusterDateTime = now.with(temporalAdjuster);
+        System.out.println("自定义时间调整器："+nextDateTime);
+        System.out.println("JDK自带时间调整器："+temporalAdjusterDateTime);
     }
 }
