@@ -1,4 +1,4 @@
-package com.itheima.localdate;
+package com.xiaomi.localdate;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

@@ -1,4 +1,4 @@
-package com.itheima.localdate;
+package com.xiaomi.localdate;
 
 import java.time.Instant;
 
@@ -14,5 +14,8 @@ public class LocalDateInstantDemo {
         System.out.println(add);
         Instant minus = now.minusSeconds(30);
         System.out.println(minus);
+        // 得到秒、毫秒、纳秒
+        System.out.println(now.getEpochSecond());
+        System.out.println(now.getNano());
     }
 }
