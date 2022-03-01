@@ -81,6 +81,7 @@ public class GetStreamDemo03 {
         Stream.of(33, 44, 55, 66, 33, 22, 44, 55).distinct().sorted((x, y) -> y - x).forEach(System.out::println);
 
         Stream.of("玄烨", "胤禛", "弘历", "弘历", "玄烨").distinct().forEach(System.out::println);
+
         System.out.println("========Stream流的distinct方法===[distinct对自定义对象去重]=====");
         // distinct对自定义对象去重
         Stream.of(
