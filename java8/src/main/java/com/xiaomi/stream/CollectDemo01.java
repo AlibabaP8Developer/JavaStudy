@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
+ * Stream流中的结果到数组、集合中
  * @author xiaomi
  */
 public class CollectDemo01 {
