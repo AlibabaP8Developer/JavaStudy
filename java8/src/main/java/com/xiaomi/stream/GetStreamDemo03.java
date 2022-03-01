@@ -153,7 +153,7 @@ public class GetStreamDemo03 {
             BinaryOperator<T> accumulator：对数据进行处理对方式
             T reduce(T identity, BinaryOperator<T> accumulator);
          */
-        int reduce = Stream.of(3,2,1).reduce(1, (i, j) -> {
+        int reduce = Stream.of(3,2,1).reduce(0, (i, j) -> {
             return i + j;
         });
         System.out.println(reduce);

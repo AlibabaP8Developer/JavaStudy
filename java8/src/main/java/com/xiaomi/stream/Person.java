@@ -18,4 +18,9 @@ public class Person {
         this.name = name;
         this.sex = sex;
     }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 }
