@@ -1,5 +1,8 @@
 package com.xiaomi.stream;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class CollectDemo04 {
@@ -15,5 +18,26 @@ public class CollectDemo04 {
                 new Person("马皇后", "女", 14),
                 new Person("杨贵妃", "女", 31),
                 new Person("慈禧老佛爷", "女", 28));
+
+        // 先根据年龄分组，每组中在根据成绩分组
+        /*
+            Collector<T, ?, Map<K, D>> groupingBy(
+                Function<? super T, ? extends K> classifier,
+                Collector<? super T, A, D> downstream
+            )
+         */
+        Map<Integer, Map<String, List<Person>>> map = stream.collect(Collectors.groupingBy(Person::getAge, Collectors.groupingBy(p -> {
+            if (p.getAge() > 20) {
+                return "成年人";
+            } else {
+                return "未成年人";
+            }
+        })));
+        map.forEach((k, v) -> {
+            System.out.println("k:" + k);
+            v.forEach((k2, v2) -> {
+                System.out.println("\t" + k2 + ":" + v2);
+            });
+        });
     }
 }
