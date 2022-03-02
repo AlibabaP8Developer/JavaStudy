@@ -33,6 +33,7 @@ public class CollectDemo04 {
                 return "未成年人";
             }
         })));
+
         map.forEach((k, v) -> {
             System.out.println("k:" + k);
             v.forEach((k2, v2) -> {
