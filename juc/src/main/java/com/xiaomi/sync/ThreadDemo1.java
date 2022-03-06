@@ -11,7 +11,7 @@ class Share {
     public synchronized void incr() throws InterruptedException {
         // 第二步：判断  干活  通知
         // 判断 number值是否是0，如果不是0，等待
-        if (number != 0) {
+        while(number != 0) {
             this.wait();
         }
         // 如果number值是0，+1操作
@@ -25,7 +25,7 @@ class Share {
     public synchronized void decr() throws InterruptedException {
         // 第二步：判断  干活  通知
         // 判断 number值是否是0，如果不是0，等待
-        if (number != 1) {
+        while (number != 1) {
             this.wait();
         }
         // 如果number值是0，+1操作
@@ -60,5 +60,25 @@ public class ThreadDemo1 {
                 }
             }
         }, "bb").start();
+
+        new Thread(() ->{
+            for (int i = 0; i < 10; i++) {
+                try {
+                    share.incr();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "cc").start();
+
+        new Thread(() ->{
+            for (int i = 0; i < 10; i++) {
+                try {
+                    share.decr();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "dd").start();
     }
 }
