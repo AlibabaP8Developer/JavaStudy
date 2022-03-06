@@ -93,7 +93,8 @@ public class GetStreamDemo03 {
                 new Person("朱允文", "男"),
                 new Person("武则天", "女"),
                 new Person("杨玉环", "女"),
-                new Person("吕后", "女")).distinct().forEach(System.out::println);
+                new Person("吕后", "女"))
+                .distinct().forEach(System.out::println);
 
         System.out.println("========Stream流的match方法========");
         /*
