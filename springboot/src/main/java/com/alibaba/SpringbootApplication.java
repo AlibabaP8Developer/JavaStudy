@@ -1,6 +1,7 @@
 package com.alibaba;
 
 import com.alibaba.bean.Pet;
+import com.alibaba.config.MyConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -17,7 +18,12 @@ public class SpringbootApplication {
             System.out.println(name);
         }
         // 从容器中获取组件
-        Pet pet = run.getBean("tomcatPet", Pet.class);
+        Pet pet1 = run.getBean("tomcatPet", Pet.class);
+        Pet pet2 = run.getBean("tomcatPet", Pet.class);
+        System.out.println("组件：" + (pet1 == pet2));
+
+        MyConfig bean = run.getBean(MyConfig.class);
+        System.out.println(bean);
     }
 
 }

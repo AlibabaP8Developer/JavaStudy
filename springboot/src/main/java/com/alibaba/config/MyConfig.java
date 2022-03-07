@@ -5,7 +5,9 @@ import com.alibaba.bean.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration // 这是一个配置类
+// 配置类里面使用@Bean标注在方法上给容器注册组件，默认也是单实例的
+// 配置类本身也是组件
+@Configuration // 这是一个配置类==配置文件
 public class MyConfig {
 
     /**
@@ -22,4 +24,5 @@ public class MyConfig {
     public Pet tomcatPet() {
         return new Pet("xiaomao");
     }
+
 }
