@@ -1,6 +1,8 @@
 server:
   port: 8080
 spring:
+  application:
+    name: order-service
   datasource:
     url: jdbc:mysql://localhost:3306/cloud_order?useSSL=false
     username: root
@@ -15,3 +17,8 @@ logging:
     cn.itcast: debug
   pattern:
     dateformat: MM-dd HH:mm:ss:SSS
+
+eureka:
+  client:
+    service-url: # eureka地址信息
+      defaultZone: http://localhost:10000/eureka
