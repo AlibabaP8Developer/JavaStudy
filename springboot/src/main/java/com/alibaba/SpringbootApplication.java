@@ -1,6 +1,7 @@
 package com.alibaba;
 
 import com.alibaba.bean.Pet;
+import com.alibaba.bean.User;
 import com.alibaba.config.MyConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,6 +25,12 @@ public class SpringbootApplication {
 
         MyConfig bean = run.getBean(MyConfig.class);
         System.out.println(bean);
+
+        // @Configuration(proxyBeanMethods = true)代理对象调用方法，springboot总会检查这个组件是否在容器中存在
+        // 保持组件单实例
+        User user = bean.user01();
+        User user1 = bean.user01();
+        System.out.println(user == user1);
     }
 
 }
