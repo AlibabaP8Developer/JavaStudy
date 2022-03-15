@@ -4,10 +4,20 @@ import com.alibaba.bean.Pet;
 import com.alibaba.bean.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
-// 配置类里面使用@Bean标注在方法上给容器注册组件，默认也是单实例的
-// 配置类本身也是组件
-// proxyBeanMethods：代理bean的方法
+/**
+ * 配置类里面使用@Bean标注在方法上给容器注册组件，默认也是单实例的
+ * 配置类本身也是组件
+ * proxyBeanMethods：代理bean的方法
+ *      full(proxyBeanMethods=true) 保证每个@Bean方法被调用多少次返回的组件都是单实例的
+ *      lite(proxyBeanMethods=false) 每个@Bean方法被调用多少次返回的组件都是新创建的
+ *         组件依赖必须使用full模式默认，其他默认是否lite模式
+ * @Import({User.class})
+ *      给容器中自动创建出这两个类型的组件，默认组件的名字全类名
+ *
+ */
+@Import({User.class})
 @Configuration(proxyBeanMethods = true) // 这是一个配置类==配置文件
 public class MyConfig {
 
@@ -19,7 +29,9 @@ public class MyConfig {
      */
     @Bean
     public User user01() {
-        return new User("李世民", 19);
+        User user = new User("李世民", 19);
+        user.setPet(tomcatPet());
+        return user;
     }
 
     @Bean

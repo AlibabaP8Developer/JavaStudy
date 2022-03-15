@@ -32,6 +32,17 @@ public class SpringbootApplication {
         User user = bean.user01();
         User user1 = bean.user01();
         System.out.println(user == user1);
+
+        User user01 = run.getBean("user01", User.class);
+        Pet tom = run.getBean("tomcatPet", Pet.class);
+        System.out.println("用户的宠物：" + (user01.getPet() == tom));
+
+        System.out.println("======");
+        // 获取组件
+        String[] beanNamesForType = run.getBeanNamesForType(User.class);
+        for (String s : beanNamesForType) {
+            System.out.println(s);
+        }
     }
 
 }
