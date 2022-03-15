@@ -9,4 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 public class Pet {
     private String name;
+    private Double weight;
+
+    public Pet(String name) {
+        this.name = name;
+    }
 }

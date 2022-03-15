@@ -1,3 +1,40 @@
 mycar:
   brand: tesila
   price: 10000
+
+person:
+  name: 朱元璋
+  age: 18
+  boss: true
+  birthday: 2020/08/08
+#  interests: [篮球, 元帅]
+  interests:
+    - 篮球
+    - 元帅
+    - 18
+    - 18.8
+  animal:
+    - 小猫
+    - 小狗
+    - 熊猫
+    - 小虎
+#  score: {eng: 88, math:99}
+  score:
+    eng: 88
+    math: 99
+  salarys:
+    - 99.88
+    - 88.77
+  pet:
+    name: 小白
+    weight: 20
+  allPets:
+    sick:
+      - name: 小黑
+        weight: 12
+    health:
+      - {name: 啸天犬, weight: 14}
+      - name: 小花
+        weight: 13
+
+
