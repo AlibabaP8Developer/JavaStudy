@@ -15,7 +15,7 @@ import java.util.Set;
 @Component
 @ConfigurationProperties(prefix = "person")
 public class Person {
-    private String name;
+    private String userName;
     private int age;
     private boolean boss;
     private String[] interests;

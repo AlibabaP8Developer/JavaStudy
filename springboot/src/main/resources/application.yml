@@ -3,8 +3,6 @@ mycar:
   price: 10000
 
 person:
-  name: 朱元璋
-  age: 18
   boss: true
   birthday: 2020/08/08
 #  interests: [篮球, 元帅]
@@ -36,5 +34,7 @@ person:
       - {name: 啸天犬, weight: 14}
       - name: 小花
         weight: 13
+  age: 18
+  user-name: 朱元璋
 
 
