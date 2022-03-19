@@ -24,7 +24,7 @@ public class Singleton1 implements Serializable {
     /**
      * 2.提供一个静态的实例对象，创建唯一的实例对象
      */
-    public static final Singleton1 INSTANCE = new Singleton1();
+    private static final Singleton1 INSTANCE = new Singleton1();
 
     /**
      * 3.公共的静态方法，返回静态成员变量

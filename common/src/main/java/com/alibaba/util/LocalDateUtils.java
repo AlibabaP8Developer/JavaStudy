@@ -6,9 +6,9 @@
  * 版权所有，侵权必究！
  */
 
-package com.xiaomi.localdate.util;
+package com.alibaba.util;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
@@ -22,7 +22,7 @@ import java.util.Date;
  *
  * @author Mark sunlightcs@gmail.com
  */
-public class DateUtils {
+public class LocalDateUtils {
 	/** 时间格式(yyyy-MM-dd) */
 	public final static String DATE_PATTERN = "yyyy-MM-dd";
 	/** 时间格式(yyyy-MM-dd HH:mm:ss) */
