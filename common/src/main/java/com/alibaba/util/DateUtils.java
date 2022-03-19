@@ -38,7 +38,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 
     /**
      * 获取当前日期, 默认格式为yyyy-MM-dd
-     *
      * @return String
      */
     public static String getDate() {
