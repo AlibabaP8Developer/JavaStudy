@@ -13,6 +13,14 @@ springboot：springboot demo代码案例、讲义<br>
 
 资源正在持续更新中...
 
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8701.md">SpringCloud实用篇01.md</a>
+
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8702.md">SpringCloud实用篇02.md</a>
+
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/nacos%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA.md">nacos集群搭建.md</a>
+
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/Nacos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97.md">Nacos安装指南.md</a>
+
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/SpringBoot%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%80%BB%E7%BB%93.md">SpringBoot常用注解总结.md</a>
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/springboot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86.md">springboot自动装配原理.md</a>
