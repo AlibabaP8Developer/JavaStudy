@@ -42,3 +42,17 @@ springboot：springboot demo代码案例、讲义<br>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java-nio/nio-demo/src/main/resources/%E8%AF%BE%E4%BB%B6/01_%E5%B0%9A%E7%A1%85%E8%B0%B7_Java%20NIO_%E8%AF%BE%E4%BB%B6_V1.0.pdf">Java NIO网络编程</a>
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/raw/master/cloud-demo/%E7%AC%94%E8%AE%B0/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8701.pptx">SpringCloud实用篇.pptx</a>
+
+# 关于作者
+
+本人大专学历+网络教育本科学历，5年+Java开发经验，平时工作中的学习笔记和开发经验总结归纳，涵盖了Java基础、并发、多线程、高性能、高可用、数据库、redis
+
+我在大学期间坚持每天在csdn写博客，积累学习经验和开发经验
+
+# 友情链接
+
+<a href="https://blog.csdn.net/qq_30398499?spm=1000.2115.3001.5343">CSDN博客</a>
+
+
+
+
