@@ -52,6 +52,11 @@ springboot：springboot demo代码案例、讲义<br>
 </p>
 
 <p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java11/doc/JDK11%26JDK12%E6%96%B0%E7%89%B9%E6%80%A7%E8%AF%A6%E8%A7%A3.pdf">
+  Java11新特性PDF</a>
+</p>
+
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java11/doc/java11.md">
   Java11新特性</a>
 </p>
