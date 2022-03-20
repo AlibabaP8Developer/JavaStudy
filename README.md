@@ -10,6 +10,57 @@ springboot：springboot demo代码案例、讲义<br>
 
 资源正在持续更新中...
 
+# Java
+## 基础&新特性
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java8/src/main/resources/JDK8%E6%96%B0%E7%89%B9%E6%80%A7.pdf">
+  Java8新特性</a>
+</p>
+
+## 集合
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Java%E9%9B%86%E5%90%88%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86%E7%82%B9%26%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93(2).md">
+  Java集合常见知识点&面试题总结(2)</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Java%E9%9B%86%E5%90%88%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86%E7%82%B9%26%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93(1).md">
+  Java集合常见知识点&面试题总结(1)</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Java%E9%9B%86%E5%90%88%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E6%80%BB%E7%BB%93.md">
+  Java集合使用注意事项总结
+  </a>
+</p>
+
+## 重要知识点
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6.md">
+  反射机制</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E4%B8%BA%E4%BB%80%E4%B9%88%20Java%20%E4%B8%AD%E5%8F%AA%E6%9C%89%E5%80%BC%E4%BC%A0%E9%80%92.md">
+  为什么 Java 中只有值传递</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E5%9F%BA%E7%A1%80%E7%AF%87%E8%AE%B2%E4%B9%89.md">
+  算法篇：二分查找、排序、设计模式等</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/BigDecimal%E8%A7%A3%E5%86%B3%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98.md">
+  BigDecimal解决浮点数运算精度丢失问题
+  </a>
+</p>
+
+## 微服务
+
 <p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8701.md">
   SpringCloud、Eureka注册中心、Ribbon负载均衡、Nacos注册中心
@@ -43,21 +94,6 @@ springboot：springboot demo代码案例、讲义<br>
 </p>
 
 <p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E4%B8%BA%E4%BB%80%E4%B9%88%20Java%20%E4%B8%AD%E5%8F%AA%E6%9C%89%E5%80%BC%E4%BC%A0%E9%80%92.md">
-  为什么 Java 中只有值传递</a>
-</p>
-
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6.md">
-  反射机制</a>
-</p>
-
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E5%9F%BA%E7%A1%80%E7%AF%87%E8%AE%B2%E4%B9%89.md">
-  算法篇讲义/二分查找、排序、设计模式等</a>
-</p>
-
-<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Spring%E4%BA%8B%E5%8A%A1%E6%80%BB%E7%BB%93.md">
   Spring事务总结</a>
 </p>
@@ -67,37 +103,12 @@ springboot：springboot demo代码案例、讲义<br>
   Spring设计模式总结</a>
 </p>
 
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Java%E9%9B%86%E5%90%88%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86%E7%82%B9%26%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93(2).md">
-  Java集合常见知识点&面试题总结(2)</a>
-</p>
-
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Java%E9%9B%86%E5%90%88%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86%E7%82%B9%26%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93(1).md">
-  Java集合常见知识点&面试题总结(1)</a>
-</p>
-
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Java%E9%9B%86%E5%90%88%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E6%80%BB%E7%BB%93.md">
-  Java集合使用注意事项总结
-  </a>
-</p>
-
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/BigDecimal%E8%A7%A3%E5%86%B3%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E7%B2%BE%E5%BA%A6%E4%B8%A2%E5%A4%B1%E9%97%AE%E9%A2%98.md">
-  BigDecimal解决浮点数运算精度丢失问题
-  </a>
-</p>
+## 并发
 
 <p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/juc/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E5%B9%B6%E5%8F%91%E7%AF%87%E8%AE%B2%E4%B9%89.md">
   并发篇讲义 JUC、多线程
   </a>
-</p>
-
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java8/src/main/resources/JDK8%E6%96%B0%E7%89%B9%E6%80%A7.pdf">
-  Java8新特性</a>
 </p>
 
 <p>
