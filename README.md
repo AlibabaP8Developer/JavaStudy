@@ -23,6 +23,10 @@ springboot：springboot demo代码案例、讲义<br>
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/%E5%9F%BA%E7%A1%80%E7%AF%87%E8%AE%B2%E4%B9%89.md">算法篇讲义/二分查找、排序、设计模式等.md</a>
 
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Spring%E4%BA%8B%E5%8A%A1%E6%80%BB%E7%BB%93.md">Spring事务总结.md</a>
+
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Spring%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93.md">Spring设计模式总结.md</a>
+
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Java%E9%9B%86%E5%90%88%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86%E7%82%B9%26%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93(2).md">Java集合常见知识点&面试题总结(2).md</a>
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Java%E9%9B%86%E5%90%88%E5%B8%B8%E8%A7%81%E7%9F%A5%E8%AF%86%E7%82%B9%26%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93(1).md">Java集合常见知识点&面试题总结(1).md</a>
@@ -38,3 +42,26 @@ springboot：springboot demo代码案例、讲义<br>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java-nio/nio-demo/src/main/resources/%E8%AF%BE%E4%BB%B6/01_%E5%B0%9A%E7%A1%85%E8%B0%B7_Java%20NIO_%E8%AF%BE%E4%BB%B6_V1.0.pdf">Java NIO网络编程</a>
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/raw/master/cloud-demo/%E7%AC%94%E8%AE%B0/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8701.pptx">SpringCloud实用篇.pptx</a>
+
+# 关于作者
+
+本人大专学历+网络教育本科学历，5年+Java开发经验，平时工作中的学习笔记和开发经验总结归纳，涵盖了Java基础、并发、多线程、高性能、高可用、数据库、redis、数据结构和算法、设计模式、互联网大厂面试经验和面试题
+
+我在大二期间一直坚持每天在csdn写博客，那时候就是随意地在博客平台上发发自己的学习笔记和自己写的程序，积累学习经验和开发经验，将我认为好的资源、学习经验和开发经验向大家分享；
+
+身边也有很多小伙伴经常问我：“我现在写博客还晚么？”
+
+我觉得哈！如果你想做什么事情，尽量少问迟不迟，多问自己值不值得，只要你觉得有意义，就尽快开始做吧！人生很奇妙，我们每一步的重大决定，都会对自己未来的人生轨迹产生影响。是好还是坏，也只有我们自己知道了！
+
+对我自己来说，坚持写博客这一项决定对我人生轨迹产生的影响是非常正面的！所以，我也推荐大家养成坚持写博客的习惯。
+
+很多老读者应该比较清楚，我是 18 年专科毕业的，因为是大专学历应届生找工作比较艰难，那个时候感觉基本啥也不会，刚毕业好不容易去了某家外包公司“养老”锻炼了两年多。
+后来去了一个上市公司工作
+
+# 友情链接
+
+<a href="https://blog.csdn.net/qq_30398499?spm=1000.2115.3001.5343">CSDN博客</a>
+
+
+
+
