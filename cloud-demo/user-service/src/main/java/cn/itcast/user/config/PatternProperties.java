@@ -10,4 +10,6 @@ import org.springframework.stereotype.Component;
 public class PatternProperties {
 
     private String dateFormat;
+    private String envShare;
+    private String name;
 }

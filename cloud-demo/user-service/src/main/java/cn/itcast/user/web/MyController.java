@@ -16,6 +16,11 @@ public class MyController {
     @Autowired
     private PatternProperties dateFormat;
 
+    @GetMapping("/prop")
+    public PatternProperties prop() {
+        return dateFormat;
+    }
+
     @GetMapping("/config")
     public String config() {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern(dateFormat.getDateFormat()));
