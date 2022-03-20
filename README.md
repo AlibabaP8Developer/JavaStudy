@@ -59,7 +59,29 @@ springboot：springboot demo代码案例、讲义<br>
   </a>
 </p>
 
-## 微服务
+## 常用框架
+### Spring
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/SpringBoot%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%80%BB%E7%BB%93.md">
+  SpringBoot常用注解总结.md</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/springboot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86.md">
+  SpringBoot自动装配原理</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Spring%E4%BA%8B%E5%8A%A1%E6%80%BB%E7%BB%93.md">
+  Spring事务总结</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Spring%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93.md">
+  Spring设计模式总结</a>
+</p>
+
+### SpringCloud
 
 <p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8701.md">
@@ -81,28 +103,6 @@ springboot：springboot demo代码案例、讲义<br>
 <p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/Nacos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97.md">
   Nacos安装指南</a>
-</p>
-
-## 常用框架
-### Spring
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/SpringBoot%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%80%BB%E7%BB%93.md">
-  SpringBoot常用注解总结.md</a>
-</p>
-
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/springboot%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E5%8E%9F%E7%90%86.md">
-  SpringBoot自动装配原理</a>
-</p>
-
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Spring%E4%BA%8B%E5%8A%A1%E6%80%BB%E7%BB%93.md">
-  Spring事务总结</a>
-</p>
-
-<p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/Spring%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93.md">
-  Spring设计模式总结</a>
 </p>
 
 ## 并发
