@@ -107,24 +107,24 @@ springboot：springboot demo代码案例、讲义<br>
 ### SpringCloud
 
 <p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8701.md">
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/doc/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8701.md">
   SpringCloud、Eureka注册中心、Ribbon负载均衡、Nacos注册中心
 </a>
 </p>
 
 <p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8702.md">
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/doc/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8702.md">
   Nacos配置管理、Feign远程调用、SpringCloud Gateway服务网关
 </a>
 </p>
 
 <p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/nacos%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA.md">
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/doc/nacos%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA.md">
   nacos集群搭建</a>
 </p>
 
 <p>
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/%E7%AC%94%E8%AE%B0/Nacos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97.md">
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/cloud-demo/doc/Nacos%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97.md">
   Nacos安装指南</a>
 </p>
 
