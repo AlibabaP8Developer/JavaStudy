@@ -17,8 +17,28 @@ springboot：springboot demo代码案例、讲义<br>
 ## 基础&新特性
 
 <p>
+  <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java8/src/main/resources/java-basic-01.md">
+  Java基础常见知识点&面试题总结(1)
+  </a>
+</p>
+<p>
+  <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java8/src/main/resources/java-basic-02.md">
+  Java基础常见知识点&面试题总结(2)
+  </a>
+</p>
+<p>
+  <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java8/src/main/resources/java-basic-03.md">
+  Java基础常见知识点&面试题总结(3)
+  </a>
+</p>
+
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java8/src/main/resources/java-8.md">
+  Java8新特性.md</a>
+</p>
+
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/java8/src/main/resources/JDK8%E6%96%B0%E7%89%B9%E6%80%A7.pdf">
-  Java8新特性</a>
+  Java8新特性.pdf</a>
 </p>
 
 ## 集合
