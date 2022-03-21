@@ -173,17 +173,19 @@ springboot：springboot demo代码案例、讲义<br>
 
 # 开源项目精选
 <p>
-  <a href="https://github.com/yangzongzhuan/RuoYi">ruoyi单体</a>
+  <a href="https://github.com/yangzongzhuan/RuoYi">
+    ruoyi单体</a>：一直想做一款后台管理系统，看了很多优秀的开源项目但是发现没有合适的。于是利用空闲休息时间开始自己写了一套后台系统。如此有了若依。她可以用于所有的Web应用程序，如网站管理后台，网站会员中心，CMS，CRM，OA。所有前端后台代码封装过后十分精简易上手，出错概率低。同时支持移动客户端访问。系统会陆续更新一些实用功能。
 </p>
 <p>
-  <a href="https://github.com/yangzongzhuan/RuoYi-Vue">ruoyi-vue前后端分离</a>
+  <a href="https://github.com/yangzongzhuan/RuoYi-Vue">
+    ruoyi-vue前后端分离</a>
 </p>
 <p>
   <a href="https://github.com/yangzongzhuan/RuoYi-Cloud">ruoyi微服务</a>
 </p>
 <p>
   <a href="https://github.com/macrozheng/mall">
-    mall项目是一套电商系统>
+    mall项目是一套电商系统
   </a>：包括前台商城系统及后台管理系统，基于SpringBoot+MyBatis实现，采用Docker容器化部署。前台商城系统包含首页门户、商品推荐、商品搜索、商品展示、购物车、订单流程、会员中心、客户服务、帮助中心等模块。后台管理系统包含商品管理、订单管理、会员管理、促销管理、运营管理、内容管理、统计报表、财务管理、权限管理、设置等模块。
 </p>
 <p>
