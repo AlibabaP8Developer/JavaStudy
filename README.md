@@ -171,6 +171,34 @@ springboot：springboot demo代码案例、讲义<br>
   Java NIO网络编程</a>
 </p>
 
+# 开源项目精选
+<p>
+  <a href="https://github.com/yangzongzhuan/RuoYi">ruoyi单体</a>
+</p>
+<p>
+  <a href="https://github.com/yangzongzhuan/RuoYi-Vue">ruoyi-vue前后端分离</a>
+</p>
+<p>
+  <a href="https://github.com/yangzongzhuan/RuoYi-Cloud">ruoyi微服务</a>
+</p>
+<p>
+  <a href="https://github.com/macrozheng/mall">
+    mall项目是一套电商系统>
+  </a>：包括前台商城系统及后台管理系统，基于SpringBoot+MyBatis实现，采用Docker容器化部署。前台商城系统包含首页门户、商品推荐、商品搜索、商品展示、购物车、订单流程、会员中心、客户服务、帮助中心等模块。后台管理系统包含商品管理、订单管理、会员管理、促销管理、运营管理、内容管理、统计报表、财务管理、权限管理、设置等模块。
+</p>
+<p>
+  <a href="https://github.com/macrozheng/mall-swarm">mall-swarm是一套微服务商城系统
+  </a>：采用了 Spring Cloud Hoxton & Alibaba、Spring Boot 2.3、Oauth2、MyBatis、Elasticsearch、Docker、Kubernetes等核心技术，同时提供了基于Vue的管理后台方便快速搭建系统。mall-swarm在电商业务的基础集成了注册中心、配置中心、监控中心、网关等系统功能。文档齐全，附带全套Spring Cloud教程。
+</p>
+<p>
+  <a href="https://github.com/macrozheng/mall-learning">
+  mall学习教程</a>：架构、业务、技术要点全方位解析。mall项目（40k+star）是一套电商系统，使用现阶段主流技术实现。涵盖了SpringBoot 2.3.0、MyBatis 3.4.6、Elasticsearch 7.6.2、RabbitMQ 3.7.15、Redis 5.0、MongoDB 4.2.5、Mysql5.7等技术，采用Docker容器化部署。
+</p>
+<p>
+  <a href="https://github.com/wuyouzhuguli/SpringAll">
+    Spring 系列教程</a>：该仓库为个人博客https://mrbird.cc中Spring系列源码，包含Spring Boot、Spring Boot & Shiro、Spring Cloud，Spring Boot & Spring Security & Spring Security OAuth2，如果该系列教程对您有帮助的话，还请点个star给予精神支持！
+</p>
+
 # 关于作者
 
 本人大专学历+网络教育本科学历，5年+Java开发经验，平时工作中的学习笔记和开发经验总结归纳，涵盖了Java基础、并发、多线程、高性能、高可用、数据库、redis、数据结构和算法、设计模式、互联网大厂面试经验和面试题
