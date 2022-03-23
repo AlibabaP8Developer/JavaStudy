@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.itcast.demo</groupId>
-    <artifactId>cloud-demo</artifactId>
+    <artifactId>spring-cloud-alibaba</artifactId>
     <version>1.0</version>
 
     <modules>
