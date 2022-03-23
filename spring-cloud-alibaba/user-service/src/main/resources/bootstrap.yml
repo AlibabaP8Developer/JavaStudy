@@ -9,6 +9,6 @@ spring:
       server-addr: 139.198.181.54:8848
       config:
         file-extension: yml
-#      discovery:
-#        cluster-name: GZ
+      discovery:
+        cluster-name: GZ
 #        namespace: 01c5b61d-3d4d-4dbd-87a0-a42b1a46c552 #dev环境

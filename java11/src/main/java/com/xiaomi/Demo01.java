@@ -1,19 +1,23 @@
 package com.xiaomi;
 
+import java.util.*;
+
 /**
- * JEP 181：基于嵌套的访问控制
+ * 局部变量var类型推断
  */
 public class Demo01 {
-
-}
-
-class Outter {
-    private int outInt;
-
-    // 成员内部类
-    public class Inner {
-        public void test() {
-            System.out.println("outInt:" + outInt);
+    public static void main(String[] args) {
+        var name = "xiaomi";
+        var names = new ArrayList<String>();
+        var map = new HashMap<String, Integer>();
+        map.put("apple", 10);
+        map.put("google", 10);
+        // 遍历map集合：键值对的方式
+        var entrySet = map.entrySet();
+        for (var entry: entrySet) {
+            var key = entry.getKey();
+            var value = entry.getValue();
+            System.out.println(key + ":" + value);
         }
     }
 }
