@@ -1,5 +1,6 @@
 package cn.itcast.order.pojo;
 
+import com.xiaomi.pojo.User;
 import lombok.Data;
 
 @Data

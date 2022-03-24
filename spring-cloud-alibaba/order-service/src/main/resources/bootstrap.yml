@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: order-service
+  profiles:
+    active: dev #开发环境，这里是dev
+  cloud:
+    nacos:
+      server-addr: 139.198.181.54:8848
+      discovery:
+        cluster-name: BJ #配置集群名称，也就是机房位置，例如：HZ 杭州

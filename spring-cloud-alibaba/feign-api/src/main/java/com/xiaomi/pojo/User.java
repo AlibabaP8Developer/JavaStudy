@@ -1,4 +1,4 @@
-package cn.itcast.order.pojo;
+package com.xiaomi.pojo;
 
 import lombok.Data;
 

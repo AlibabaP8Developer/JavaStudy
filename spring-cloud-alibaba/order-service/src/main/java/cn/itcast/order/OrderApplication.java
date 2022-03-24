@@ -2,6 +2,7 @@ package cn.itcast.order;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
+import com.xiaomi.clients.UserClient;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +12,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@EnableFeignClients
+// 第一种方式
+// @EnableFeignClients(basePackages = "com.xiaomi.clients") //(defaultConfiguration = DefaultFeignConfig.class)
+// 第二种方式
+@EnableFeignClients(clients = {UserClient.class}) //(defaultConfiguration = DefaultFeignConfig.class)
 @EnableDiscoveryClient
 @MapperScan("cn.itcast.order.mapper")
 @SpringBootApplication

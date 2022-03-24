@@ -1,9 +1,9 @@
 package cn.itcast.order.service;
 
-import cn.itcast.order.clients.UserClient;
 import cn.itcast.order.mapper.OrderMapper;
 import cn.itcast.order.pojo.Order;
-import cn.itcast.order.pojo.User;
+import com.xiaomi.clients.UserClient;
+import com.xiaomi.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
