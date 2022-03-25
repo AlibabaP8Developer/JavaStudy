@@ -17,3 +17,9 @@ spring:
           uri: lb://order-service
           predicates:
             - Path=/order/**
+            - Before=2031-04-01T10:00:00.433+08:00[Asia/Shanghai]
+          filters:
+            - AddRequestHeader=Truth, Itcast is freaking aowsome, order!
+      default-filters:
+        - AddRequestHeader=Truth, Itcast is freaking aowsome, total!
+
