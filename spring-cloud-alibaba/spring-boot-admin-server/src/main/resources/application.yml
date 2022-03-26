@@ -1,0 +1,14 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: spring-boot-admin
+  cloud:
+    nacos:
+      server-addr: 139.198.181.54:8848
+      discovery:
+        cluster-name: GZ
+  boot:
+    admin:
+      ui:
+        title: 服务状态监控

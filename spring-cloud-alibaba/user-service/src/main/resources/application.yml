@@ -7,6 +7,29 @@ spring:
     username: root
     password: Dcp#7ujm
     driver-class-name: com.mysql.jdbc.Driver
+  boot:
+    admin:
+      client:
+        url: localhost:10000
+        instance:
+          prefer-ip: true
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+      enabled: true
+    info:
+      enabled: true
+    beans:
+      enabled: true
+    metrics:
+      enabled: true
 
 mybatis:
   type-aliases-package: cn.itcast.user.pojo

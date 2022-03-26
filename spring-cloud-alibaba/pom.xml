@@ -14,6 +14,7 @@
         <module>eureka-server</module>
         <module>feign-api</module>
         <module>gateway</module>
+        <module>spring-boot-admin-server</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -71,6 +72,12 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- spring boot admin client -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>2.3.1</version>
         </dependency>
     </dependencies>
 </project>
