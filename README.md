@@ -2,13 +2,40 @@
 
 代码里包含详细的代码示例，不懂之处可以在代码中体会理解！！！
 
-cloud-demo：微服务项目案例<br>
-common：常用工具类<br>
-java8: java基础和Java8新特性<br>
-java-nio：NIO <br>
-juc：多线程<br>
-leetcode：leetcode题目案例、面试总结、整理大厂面试题<br>
-springboot：springboot demo代码案例、讲义<br>
+common：常用工具类
+
+java8: java基础和Java8新特性
+
+java-nio：NIO
+
+juc：多线程
+
+leetcode：leetcode题目案例、面试总结、整理大厂面试题
+
+springboot：springboot demo代码案例、讲义
+
+spring-cloud-alibaba：微服务案例
+
+  ｜- eureka-server：集成了eureka，目前使用的nacos，eureka相关配置暂时被屏蔽了，如需使用调整注释中配置信息即可
+  
+  ｜- feign-api：整合了feign远程调用组件
+  
+  ｜- gateway：整合了spring cloud gateway
+  
+  ｜- order-service：订单服务demo
+  
+  ｜- user-service：用户服务demo
+  
+  ｜- doc：sql脚本、nacos文档、使用说明
+  
+  ｜- spring-boot-admin-server：服务监控指标
+
+spring-cloud-gateway包含过滤器
+
+通过网关访问方式：http://localhost:10010/order/102?authorization=admin
+
+服务监控指标：http://localhost:10000/applications
+  
 软考资源<br>
 
 资源正在持续更新中...
