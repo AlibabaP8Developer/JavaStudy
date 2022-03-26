@@ -185,6 +185,22 @@ spring-cloud-gateway包含过滤器
   Nacos安装指南</a>
 </p>
 
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-cloud-alibaba/doc/sentinel%E8%A7%84%E5%88%99%E6%8C%81%E4%B9%85%E5%8C%96.md">
+  Sentinel 规则持久化</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-cloud-alibaba/doc/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BF%9D%E6%8A%A4.md">
+  微服务保护 Sentinel</a>
+</p>
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-cloud-alibaba/doc/Jmeter%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8.md">
+  Jmeter使用</a>
+</p>
+
+
 ## 并发
 
 <p>
