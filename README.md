@@ -14,6 +14,8 @@ leetcode：leetcode题目案例、面试总结、整理大厂面试题
 
 springboot：springboot demo代码案例、讲义
 
+spring-boot-rabbitmq：springboot整合rabbit
+
 spring-cloud-alibaba：微服务案例
 
   ｜- eureka-server：集成了eureka，目前使用的nacos，eureka相关配置暂时被屏蔽了，如需使用调整注释中配置信息即可
