@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: gateway
+  boot:
+    admin:
+      client:
+        url: localhost:10000
+        instance:
+          prefer-ip: true
   cloud:
     nacos:
       server-addr: 139.198.181.54:8848
@@ -37,3 +43,20 @@ spring:
             allowedHeaders: "*" # 允许在请求中携带的头信息
             allowCredentials: true # 是否允许携带cookie
             maxAge: 360000 # 这次跨域检测的有效期
+
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+      enabled: true
+    info:
+      enabled: true
+    beans:
+      enabled: true
+    metrics:
+      enabled: true
