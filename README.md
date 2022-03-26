@@ -222,7 +222,6 @@ spring-cloud-gateway包含过滤器
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/transaction-isolation-level.md">事务隔离级别(图文详解)</a>
 
-# 高性能
 ## Redis
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/Redis/3-commonly-used-cache-read-and-write-strategies.md">3种常用的缓存读写策略</a>
 
