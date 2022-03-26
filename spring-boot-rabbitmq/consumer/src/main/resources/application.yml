@@ -1,0 +1,10 @@
+server:
+  port: 10011
+
+spring:
+  rabbitmq:
+    host: 139.198.181.54
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
