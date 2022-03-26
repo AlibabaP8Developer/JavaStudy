@@ -13,6 +13,10 @@ spring:
   cloud:
     nacos:
       server-addr: 139.198.181.54:8848
+    sentinel:
+      transport:
+        port: 8718
+        dashboard: 139.198.181.54:8718
     gateway:
       routes:
         - id: user-service

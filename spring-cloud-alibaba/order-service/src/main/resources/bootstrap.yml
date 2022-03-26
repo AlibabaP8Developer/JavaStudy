@@ -8,3 +8,7 @@ spring:
       server-addr: 139.198.181.54:8848
       discovery:
         cluster-name: BJ #配置集群名称，也就是机房位置，例如：HZ 杭州
+    sentinel:
+      transport:
+        port: 8718
+        dashboard: 139.198.181.54:8718

@@ -12,7 +12,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 //@Order(-1) // 值越小，越优先执行
-@Component
+//@Component
 public class AuthorizedFilter implements GlobalFilter, Ordered {
 
     @Override

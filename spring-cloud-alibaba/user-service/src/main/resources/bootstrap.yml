@@ -11,4 +11,8 @@ spring:
         file-extension: yml
       discovery:
         cluster-name: GZ
+    sentinel:
+      transport:
+        port: 8718
+        dashboard: 139.198.181.54:8718
 #        namespace: 01c5b61d-3d4d-4dbd-87a0-a42b1a46c552 #dev环境
