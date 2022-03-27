@@ -32,7 +32,7 @@ class SitemapApplicationTests {
         //创建字符输出流并且自定义输出文件的位置和文件名
         FileWriter writer = null;
         try {
-            writer = new FileWriter(filepath+"/meetingList.html");
+            writer = new FileWriter(filepath+"/meeting/meetingList.html");
         } catch (IOException e) {
             e.printStackTrace();
         }
