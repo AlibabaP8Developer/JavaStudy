@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: sitemap
+    name: boot-thymeleaf
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://139.198.181.54:3306/ry?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
