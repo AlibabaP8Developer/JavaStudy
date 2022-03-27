@@ -8,3 +8,9 @@ spring:
     username: guest
     password: guest
     virtual-host: /
+    # 设置preFetch值，可以控制预取消息的上线
+    listener:
+      simple:
+        prefetch: 1 #每次只能获取一条消息，处理完成才能获取下一个消息
+
+
