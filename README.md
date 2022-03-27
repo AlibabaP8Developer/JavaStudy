@@ -249,6 +249,12 @@ spring-cloud-gateway包含过滤器
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/Redis/redis-questions-01.md">Redis知识点&面试题总结</a>
 
+# 消息队列
+## RabbitMQ
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/RabbitMQ.md">RabbitMQ</a>
+
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/RabbitMQ%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97.md">RabbitMQ部署指南.md</a>
+
 # 开源项目精选
 <p>
   <a href="https://github.com/yangzongzhuan/RuoYi">
