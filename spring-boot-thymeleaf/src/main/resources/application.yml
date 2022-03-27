@@ -1,0 +1,25 @@
+server:
+  port: 8090
+
+spring:
+  thymeleaf:
+    servlet:
+      content-type: text/html;
+    suffix: .html
+    prefix: classpath:/templates/
+    encoding: UTF-8
+    mode: HTML
+    cache: false
+  mvc:
+    static-path-pattern: /**
+  mail:
+    default-encoding: UTF-8
+    username: 18747633468@163.com
+    password: SISQHSNBBOXFEJNW
+    host: smtp.163.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+
