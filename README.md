@@ -16,6 +16,8 @@ springboot：springboot demo代码案例、讲义
 
 spring-boot-rabbitmq：springboot整合rabbit
 
+spring-boot-thymeleaf：springboot整合thymeleaf，生成静态页，实用工具类
+
 spring-cloud-alibaba：微服务案例
 
   ｜- eureka-server：集成了eureka，目前使用的nacos，eureka相关配置暂时被屏蔽了，如需使用调整注释中配置信息即可
