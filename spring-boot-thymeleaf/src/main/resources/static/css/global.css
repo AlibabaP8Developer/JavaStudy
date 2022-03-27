@@ -1,0 +1,44 @@
+body,html,p,ul,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,strong,b,i,del,a,div,li,input,select,option,textarea,label{
+  margin:0;
+  padding:0;
+}
+html{
+  font-size:10px;
+}
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+  background-color:#00679d !important;
+}
+
+/* 公用的样式 */
+.navbar{
+  height:6rem;
+  line-height:6rem;
+  background-color:#f2f2f2;
+  cursor: pointer;
+  color:#999;
+}
+/* 导航信息 */
+.navbar .container{
+  width:70%;
+  margin:0 auto;
+}
+/* 文字内容 */
+.catogaryTitle{
+  height:5rem;
+  line-height:5rem;
+  color:#333;
+  font-size:1.8rem;
+  font-weight:bold;
+}
+
+.page-item {
+  padding: 1px 5px;
+  border: 1px solid #afafaf;
+  margin-left: 3px
+}
+
+.page-item.active {
+  color: red;
+  border: 1px solid red;
+}

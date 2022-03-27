@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name=Keywords content="会议服务,项目资源,能联全球,全球能源互联网,全球能源互联网发展合作平台,全球能源互联网发展合作组织,能源,新能源,清洁能源,电力">
+  <meta name=Description content="会议服务,项目资源,可按照区域和类别浏览项目资源信息，并提供最新能源合作项目资讯信息。推动全球能源电力合作，共创绿色低碳，可持续发展的美好未来。">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/list.css">
+  <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+  <script src="../../js/global.js"></script>
+  <script src="../../js/list.js"></script>
+  <script src="https://www.layuicdn.com/layui/layui.js"></script>
+  <title>会议服务 - 能联全球 - 全球能源互联网发展合作平台</title>
+</head>
+<body>
+<div class="list">
+  <div class="navbar">
+    <div class="container">
+        <span class="layui-breadcrumb" lay-separator=">">
+          <a href="../../map.html">首页</a>
+        </span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="listitems">
+      <div class="itemlist">
+        <div class="itemhead">
+          <div class="index">序号</div>
+          <div class="title">会议标题</div>
+          <div class="date">发布日期</div>
+        </div>
+        <div class="itemcontent" th:each="item,serviceStat: ${meetingList}">
+          <a class="item" th:href="'../detail/'+${item.meetingName}+'-'+${item.getId()}+'.html'">
+            <div class="index" th:text="${serviceStat.index+1}"></div>
+            <div class="title" th:text="${item.meetingName}"></div>
+            <div class="date" th:text="${#dates.format(item.meetingReleaseDate, 'yyyy-MM-dd')}"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="float: left" th:if="${meetingPage.hasNext()}">
+    当前第<span th:text="${meetingPage.current}"></span>页,共<span
+          th:text="${meetingTotalPage}"></span>页,总记录数<span th:text="${meetingPage.total}"></span>
+  </div>
+  <div style="float: right">
+    <a th:href="@{${meetingJumpUrl}+'1.html'}" th:text="首页" th:if="${meetingPage.current>1}" th:class="dataPage-item"></a>
+    <a th:href="@{${meetingJumpUrl}+${meetingPage.current-1}+'.html'}" th:text="上一页" th:class="dataPage-item"
+       th:if="${meetingPage.current>1}"></a>
+    <a th:href="@{${meetingJumpUrl}+ ${i}+'.html'}"
+       th:each="i :${#numbers.sequence(1, meetingTotalPage)}" th:text="${i}"
+       th:class="${meetingPage.current == i}? 'page-item active' :'page-item' "></a>
+    <a th:href="@{${jumpUrl}+${meetingPage.current+1}+'.html'}" th:text="下一页" th:class="dataPage-item"
+       th:if="${meetingPage.current<meetingTotalPage}"></a> <a
+          th:href="@{${meetingJumpUrl}+${meetingTotalPage}+'.html'}" th:text="尾页" th:class="dataPage-item"
+          th:if="${meetingPage.current<meetingTotalPage}"></a>
+  </div>
+</div>
+<script>
+  // layui.use('laypage', function(){
+  //   var laypage = layui.laypage;
+  //   laypage.render({
+  //     elem:'page',
+  //     count:50
+  //   })
+  // })
+</script>
+</body>
+</html>

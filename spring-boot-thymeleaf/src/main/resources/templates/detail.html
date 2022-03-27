@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/global.css">
+  <link rel="stylesheet" href="../../css/detail.css">
+  <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+  <script src="https://www.layuicdn.com/layui/layui.js"></script>
+  <script src="../../js/global.js"></script>
+  <script src="../../js/detail.js"></script>
+  <title>站点详情</title>
+</head>
+<body>
+  <div class="detail">
+    <div class="navbar">
+      <div class="container">
+        <span class="layui-breadcrumb" lay-separator=">">
+           <a href="../../map.html">首页</a>
+        </span>
+      </div>
+    </div>
+    <div class="container content">
+      <h3 class="detailTile" th:text="${name}"></h3>
+      <div class="info">
+        <div class="releaseDate">发布时间：<span th:text="${date}"></span></div>
+        <div class="source">来源：<span>www.geidcp.com</span></div>
+      </div>
+      <div class="article">
+        <img src="" alt="">
+        <span th:utext="${desc}"></span>
+      </div>
+    </div>
+  </div>
+  <script>
+    //初始化样式
+    function initSize(){
+      let el_detail = document.querySelector('.detail');
+      let el_content = document.querySelector('.content');
+      el_detail.style.minHeight = getWindowSize().wh  + 'px';
+      el_content.style.minHeight = getWindowSize().wh -160 + 'px';
+    }
+    initSize()
+    
+  </script> 
+</body>
+</html>

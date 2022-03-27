@@ -1,0 +1,43 @@
+.map{
+  margin:0 auto;
+}
+.map>.container{
+  width:70%;
+  margin:0 auto;
+  padding:1rem;
+}
+.catogaryTitle{
+  height:5rem;
+  line-height:5rem;
+  color:#333;
+  font-size:1.8rem;
+  font-weight:bold;
+}
+.catogarItem{
+  padding:1rem;
+}
+.catogarItem .container{
+  padding:1rem;
+} 
+.catogarItem .bgf2{
+  background-color:#f2f2f2;
+  padding:1rem;
+} 
+.catogarylist{
+  display:flex;
+  align-items:center;
+  padding:1rem 0;
+}
+
+.catogarylist .item{
+  font-size:1.6rem;
+  margin:0.5rem 1rem;
+  cursor: pointer;
+  color:#666;
+}
+.catogarylist .item:nth-of-type(1){
+  margin-left:0;
+}
+.catogarylist .item:hover a{
+  color:#0249ff;
+}

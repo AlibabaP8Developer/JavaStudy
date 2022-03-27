@@ -1,0 +1,42 @@
+.detail{
+  background-color:#f2f2f2;
+}
+.detail>.container{
+  width:70%;
+  margin:0 auto;
+  background-color:#fff;
+  padding:1rem
+}
+
+.content .detailTile{
+  font-size:3rem;
+  text-align:center;
+  color:#006eab;
+  width:80%;
+  margin:1rem auto;
+  line-height:5rem;
+  
+}
+.content .info{
+  background-color:#f2f2f2;
+  width:80%;
+  padding:1rem 2rem;
+  margin:2rem auto;
+  border-radius:0.5rem;
+  color:#666;
+}
+.content .info>div{
+  height:4rem;
+  line-height:4rem;
+}
+
+.content .article{
+  width:82%;
+  margin:2rem auto;
+}
+
+.content .article p{
+  margin:1rem 0;
+  text-indent:3rem;
+  line-height:2.4rem;
+}

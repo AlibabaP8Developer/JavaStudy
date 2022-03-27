@@ -2,6 +2,13 @@ server:
   port: 8090
 
 spring:
+  application:
+    name: sitemap
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://139.198.181.54:3306/ry?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: Dcp#7ujm
   thymeleaf:
     servlet:
       content-type: text/html;
@@ -23,3 +30,12 @@ spring:
           ssl:
             enable: true
 
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.geidco.dcp.pojo
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
