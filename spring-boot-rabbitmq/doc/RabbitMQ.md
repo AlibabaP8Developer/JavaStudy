@@ -627,6 +627,11 @@ Fanout，英文翻译是扇出，我觉得在MQ中叫广播更合适。
 - 5）  订阅队列的消费者都能拿到消息
 
 
+**案例：** 利用SpringAMQP演示FanoutExchange的使用
+实现思路如下：
+（1）在consumer服务中，利用代码声明队列、交换机，并将两者绑定
+（2）在consumer服务中，编写两个消费者方法，分别监听fanout.queue1和fanout.queue2
+（3）在publisher中编写测试方法，向itcast.fanout发送消息
 
 我们的计划是这样的：
 

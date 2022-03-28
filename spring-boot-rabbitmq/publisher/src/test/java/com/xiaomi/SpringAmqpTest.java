@@ -20,4 +20,12 @@ public class SpringAmqpTest {
         String message = "hello, spring amqp!!!";
         rabbitTemplate.convertAndSend(queueName, message);
     }
+
+    @Test
+    public void testSendFanoutExchange() {
+        // 交换机名称
+        String exchangeName = "xiaomi.fanout";
+        String message = "hello, every one!";
+        rabbitTemplate.convertAndSend(exchangeName, "", message);
+    }
 }
