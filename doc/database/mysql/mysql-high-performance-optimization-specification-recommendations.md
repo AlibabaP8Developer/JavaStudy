@@ -5,8 +5,6 @@ tag:
   - MySQL
 ---
 
-> 作者: 听风，原文地址: <https://www.cnblogs.com/huchong/p/10219318.html>。JavaGuide 已获得作者授权。
-
 ## 数据库命令规范
 
 - 所有数据库对象名称必须使用小写字母并用下划线分割

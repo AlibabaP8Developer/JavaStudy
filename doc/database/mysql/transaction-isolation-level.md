@@ -5,9 +5,6 @@ tag:
   - MySQL
 ---
 
-
-> 本文由 [SnailClimb](https://github.com/Snailclimb) 和 [guang19](https://github.com/guang19) 共同完成。
-
 ## 事务隔离级别(图文详解)
 
 ### 什么是事务?
