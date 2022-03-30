@@ -1,6 +1,8 @@
 # 介绍
 
 代码里包含详细的代码示例，不懂之处可以在代码中体会理解！！！
+有任何疑问和意见可以在issues提问
+QQ群讨论：779146205
 
 common：常用工具类
 
@@ -13,6 +15,8 @@ juc：多线程
 leetcode：leetcode题目案例、面试总结、整理大厂面试题
 
 springboot：springboot demo代码案例、讲义
+
+spring-boot-aliyun：整合了阿里云短信
 
 spring-boot-rabbitmq：springboot整合rabbit
 
