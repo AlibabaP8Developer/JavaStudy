@@ -12,6 +12,7 @@ public class FanoutConfig {
 
     /**
      * itcast.fanout 创建交换机
+     *
      * @return
      */
     @Bean
@@ -21,6 +22,7 @@ public class FanoutConfig {
 
     /**
      * fanout.queue1 创建队列
+     *
      * @return
      */
     @Bean
@@ -30,7 +32,8 @@ public class FanoutConfig {
 
     /**
      * 绑定队列1到交换机itcast.fanout
-     * @param fanoutQueue1 队列1
+     *
+     * @param fanoutQueue1   队列1
      * @param fanoutExchange 交换机
      * @return
      */
@@ -41,6 +44,7 @@ public class FanoutConfig {
 
     /**
      * fanout.queue2 创建队列
+     *
      * @return
      */
     @Bean
@@ -51,6 +55,19 @@ public class FanoutConfig {
     @Bean
     public Binding fanoutBinding2(Queue fanoutQueue2, FanoutExchange fanoutExchange) {
         return BindingBuilder.bind(fanoutQueue2).to(fanoutExchange);
+    }
+
+    /**
+     * 消息转换器
+     * 1 引入依赖 jackson
+     * 2 注入bean
+     * 3 定义消费者
+     *
+     * @return
+     */
+//    @Bean
+    public Queue objectQueue1() {
+        return new Queue("object.queue");
     }
 
 }
