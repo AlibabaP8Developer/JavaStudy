@@ -267,6 +267,10 @@ Spring Cloud 入门
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/rabbitmq-intro.md">RabbitMQ入门、面试总结</a>
 
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/RabbitMQ-%E9%AB%98%E7%BA%A7%E7%AF%87.md">
+RabbitMQ服务异步通信 高级篇
+</a>
+
 # 开源项目精选
 <p>
   <a href="https://github.com/yangzongzhuan/RuoYi">
