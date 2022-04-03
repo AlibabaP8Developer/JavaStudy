@@ -5,8 +5,9 @@ spring:
   application:
     name: boot-thymeleaf
   datasource:
+    type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://139.198.181.54:3306/ry?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://139.198.181.54:3306/leetcode?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
     username: root
     password: Dcp#7ujm
   thymeleaf:
@@ -32,7 +33,7 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath*:/mapper/**/*.xml
-  type-aliases-package: com.geidco.dcp.pojo
+  type-aliases-package: com.xiaomi.pojo
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   global-config:

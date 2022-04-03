@@ -5,6 +5,6 @@ import com.xiaomi.pojo.MeetingBasicInfo;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface MeetingDao extends BaseMapper<MeetingBasicInfo> {
+public interface MeetingDAO extends BaseMapper<MeetingBasicInfo> {
 
 }

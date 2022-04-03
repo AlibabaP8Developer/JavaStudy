@@ -8,3 +8,13 @@ spring:
     username: guest #用户名
     password: guest #密码
     virtual-host: /
+    publisher-confirm-type: CORRELATED
+    publisher-returns: true
+    template:
+      mandatory: true
+
+logging:
+  pattern:
+    dateformat: HH:mm:ss:SSS
+  level:
+    com.xiaomi: debug
