@@ -19,5 +19,13 @@ public class Demo01 {
             var value = entry.getValue();
             System.out.println(key + ":" + value);
         }
+        // lambda表达式简化匿名内部类写法
+        List<Integer> scores = new ArrayList<Integer>();
+        Collections.addAll(scores, 9, 10, 2);
+        // 降序排序
+        scores.sort((@Deprecated var o1, @Deprecated var o2) -> {
+            return o1.compareTo(o2);
+        });
+        System.out.println(scores);
     }
 }
