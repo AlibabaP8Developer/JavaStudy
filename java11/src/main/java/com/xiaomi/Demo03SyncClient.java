@@ -6,7 +6,12 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class Demo03Client {
+public class Demo03SyncClient {
+
+    /**
+     * 发起同步请求
+     * @param args
+     */
     public static void main(String[] args) {
         var url = "https://www.youtube.com/watch?v=05Z5CcH-k94&ab_channel=%E8%80%81%E6%A2%81";
         // 1.创建一个httpclient客户端对象
