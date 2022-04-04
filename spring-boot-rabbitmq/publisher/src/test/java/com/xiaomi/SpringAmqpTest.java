@@ -1,15 +1,21 @@
 package com.xiaomi;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.concurrent.FailureCallback;
+import org.springframework.util.concurrent.SuccessCallback;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
+@Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringAmqpTest {
@@ -28,8 +34,24 @@ public class SpringAmqpTest {
     public void testSendFanoutExchange() {
         // 交换机名称
         String exchangeName = "xiaomi.fanout";
-        String message = "hello, every one!";
-        rabbitTemplate.convertAndSend(exchangeName, "", message);
+        String message = "hello, every one, only!!!!!!!!";
+        CorrelationData correlationData = new CorrelationData(UUID.randomUUID().toString());
+        correlationData.getFuture().addCallback((SuccessCallback<CorrelationData.Confirm>) result -> {
+            if (result.isAck()) {
+                // ack
+                log.debug("消息成功投递到交换机！消息ID：{}", correlationData.getId());
+                System.out.println("消息成功投递到交换机");
+            } else {
+                // nack
+                log.error("消息投递到交换机失败！消息ID：{}", correlationData.getId());
+            }
+        }, throwable -> {
+            // 失败回调
+            log.error("消息发送失败：{}", throwable);
+            // 重发消息
+        });
+        rabbitTemplate.convertAndSend("amq.topic", "simple.queue", message);
+//        rabbitTemplate.convertAndSend(exchangeName, "", message);
     }
 
     @Test
