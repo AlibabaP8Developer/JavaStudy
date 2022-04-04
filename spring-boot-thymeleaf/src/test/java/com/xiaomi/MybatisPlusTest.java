@@ -115,6 +115,7 @@ public class MybatisPlusTest {
     public void testUpdate() {
         User user = new User();
         user.setId("1510465499790577665");
+        // command/ctrl + p
         user.setSex(UserEnum.FEMAlE.getSex());
         int result = userDAO.updateById(user);
         System.out.println("result:" + result);
