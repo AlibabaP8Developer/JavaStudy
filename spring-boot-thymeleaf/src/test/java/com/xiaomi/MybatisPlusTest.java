@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xiaomi.dao.MeetingDAO;
 import com.xiaomi.dao.UserDAO;
+import com.xiaomi.enums.UserEnum;
 import com.xiaomi.pojo.MeetingBasicInfo;
 import com.xiaomi.pojo.User;
 import com.xiaomi.service.MeetingService;
@@ -33,6 +34,9 @@ public class MybatisPlusTest {
     @Autowired
     private MeetingDAO meetingDAO;
 
+    /**
+     * mybatis plus分页
+     */
     @Test
     public void mybatisPlusPage() {
         Page<MeetingBasicInfo> page = new Page<>(1, 5);
@@ -111,7 +115,7 @@ public class MybatisPlusTest {
     public void testUpdate() {
         User user = new User();
         user.setId("1510465499790577665");
-        user.setUsername("刘邦");
+        user.setSex(UserEnum.FEMAlE.getSex());
         int result = userDAO.updateById(user);
         System.out.println("result:" + result);
         System.out.println("id:" + user.getId());

@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 public class User {
     private String id;
     private String username;
+    private Integer sex;
     private String address;
     private LocalDate birthday;
     private LocalDateTime createDate;
