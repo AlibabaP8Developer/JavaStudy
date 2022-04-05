@@ -1,0 +1,14 @@
+server:
+  port: 10020
+
+spring:
+  redis:
+    host: 139.198.181.54
+    port: 6379
+    password: null
+    lettuce:
+      pool:
+        max-active: 8 #最大连接
+        max-idle: 8 #最大空闲连接
+        min-idle: 0 #最小空闲连接
+        max-wait: 1000ms #等待时间
