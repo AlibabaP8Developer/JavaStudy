@@ -9,7 +9,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://139.198.181.54:3306/leetcode?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
     username: root
-    password: Dcp#7ujm
+    password: 123456
   thymeleaf:
     servlet:
       content-type: text/html;

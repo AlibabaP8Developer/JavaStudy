@@ -7,8 +7,8 @@ aliyun:
   oss:
     endpoint: oss-cn-beijing.aliyuncs.com
     bucket: gulimall-test-demo
-  access-key: xxx
-  secret-key: xxx
+  access-key: LTAIXF8S3xycEbcP
+  secret-key: m1DQNcYiVeBkp3EDavnd8feXgfp4Fw
 sms:
   templateCode: SMS_139985936
   signName: Li博客
