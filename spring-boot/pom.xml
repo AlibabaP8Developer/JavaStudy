@@ -38,6 +38,12 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--自定义的starter-->
+        <dependency>
+            <groupId>com.xiaomi</groupId>
+            <artifactId>spring-boot-starter-mydemo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

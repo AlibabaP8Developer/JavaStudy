@@ -1,6 +1,7 @@
 package com.alibaba;
 
 import com.alibaba.bean.Car;
+import com.xiaomi.service.HelloService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,11 +10,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SpringbootApplicationTests {
 
     @Autowired
-    private Car car;
+    private HelloService car;
 
     @Test
     public void contextLoads() {
-        System.out.println(car);
+        System.out.println(car.hello("大明：：：：大清"));
     }
 
 }
