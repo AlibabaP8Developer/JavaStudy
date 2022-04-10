@@ -1,3 +1,4 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.xiaomi.config.HelloServiceAutoConfiguration
+  com.xiaomi.config.HelloServiceAutoConfiguration, \
+  com.xiaomi.config.LogAutoConfiguration
