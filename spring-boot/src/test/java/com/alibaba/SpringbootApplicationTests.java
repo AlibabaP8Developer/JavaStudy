@@ -1,6 +1,5 @@
 package com.alibaba;
 
-import com.alibaba.bean.Car;
 import com.xiaomi.service.HelloService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

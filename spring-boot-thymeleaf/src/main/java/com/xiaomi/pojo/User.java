@@ -17,6 +17,7 @@ public class User {
     private String username;
     private Integer sex;
     private String address;
+    private String email;
     private LocalDate birthday;
     private LocalDateTime createDate;
 }

@@ -55,8 +55,8 @@ public class FileUtil {
     }
  
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("/Users/alibaba/Desktop/demo");
-        FileUtil.fileNameAddTo(file, "【www.baidu.com】");
-        //FileUtil.fileNameManage(file, "【www.baidu.com】", "");
+        File file = new File("/Users/lizhenghang/Desktop/封神英雄2 72集");
+//        FileUtil.fileNameAddTo(file, "【www.baidu.com】");
+        FileUtil.fileNameManage(file, "-", "");
     }
 }

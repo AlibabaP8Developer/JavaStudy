@@ -1,6 +1,5 @@
 package com.alibaba.controller;
 
-import com.alibaba.bean.Car;
 import com.alibaba.bean.Person;
 import com.xiaomi.annotation.Log;
 import org.springframework.beans.factory.annotation.Autowired;
