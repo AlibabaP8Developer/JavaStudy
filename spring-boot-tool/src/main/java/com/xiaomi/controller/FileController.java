@@ -4,15 +4,13 @@ import com.alibaba.util.R;
 import com.xiaomi.util.CompressUtil;
 import com.xiaomi.util.PdfToWordUtil;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.Map;
 import java.util.UUID;
 
@@ -38,17 +36,23 @@ public class FileController {
         } else {
             path = linuxDir;
         }
+        String docPath = "doc/";
+        String splitPath = "split/";
+        String doc = path + docPath;
+        String split = path + splitPath;
+
         String originalFilename = pdf.getOriginalFilename();
         String filename = pdf.getName();
         String file = path + originalFilename;
         System.out.println(file);
-        Map<String, Object> result = new PdfToWordUtil().pdftoword(file);
+        Map<String, Object> result = new PdfToWordUtil().pdftoword(file, doc, split);
         System.out.println("result: "+result);
         String desPath = (String) result.get("desPath");
         try {
             String zipFile = CompressUtil.zipFile(new File(desPath), "zip");
             response.setContentType("APPLICATION/OCTET-STREAM");
-            String fileName = "ZipPdf-" + originalFilename.substring(0, originalFilename.lastIndexOf(".")) + ".zip";
+            String name = originalFilename.substring(0, originalFilename.lastIndexOf("."));
+            String fileName = "ZipPdf-" + name + ".zip";
             response.setHeader("Content-Disposition", "attachment; filename=" + fileName);
             OutputStream out = response.getOutputStream();
             File ftp = ResourceUtils.getFile(zipFile);

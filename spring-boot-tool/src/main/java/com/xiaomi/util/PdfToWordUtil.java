@@ -18,7 +18,9 @@ public class PdfToWordUtil {
     // 3、如果是大文件，需要对子pdf文件一个一个进行转化
     String docPath = "./doc/";
 
-    public Map<String, Object> pdftoword(String srcPath) {
+    public Map<String, Object> pdftoword(String srcPath, String docPath, String splitPath) {
+        this.splitPath = splitPath;
+        this.docPath = docPath;
         // 4、最终生成的doc所在的目录，默认是和引入的一个地方，开源时对外提供下载的接口。
         String desPath = srcPath.substring(0, srcPath.length() - 4) + ".docx";
         boolean result = false;
@@ -49,11 +51,13 @@ public class PdfToWordUtil {
                     for (int i = 0; i < fs.length; i++) {
                         PdfDocument sonpdf = new PdfDocument();
                         sonpdf.loadFromFile(fs[i].getAbsolutePath());
-                        sonpdf.saveToFile(docPath + fs[i].getName().substring(0,
-                                fs[i].getName().length() - 4) + ".docx", FileFormat.DOCX);
+                        String test = fs[i].getName().substring(0, fs[i].getName().length() - 4) + ".docx";
+                        sonpdf.saveToFile(docPath + test, FileFormat.DOCX);
+                        sonpdf.close();
                     }
                     //第三步：对转化的doc文档进行合并，合并成一个大的word
                     try {
+                        pdf.close();
                         result = MergeWordDocxUtil.merge(docPath, desPath);
                         System.out.println(result);
                     } catch (Exception e) {
@@ -92,7 +96,7 @@ public class PdfToWordUtil {
     }
 
     // 判断是否是pdf文件
-    private boolean isPDFFile(String srcPath2) {
+    public static boolean isPDFFile(String srcPath2) {
         File file = new File(srcPath2);
         String filename = file.getName();
         if (filename.endsWith(".pdf")) {
@@ -111,17 +115,17 @@ public class PdfToWordUtil {
         return fs;
     }
 
-    public void clearFiles(String workspaceRootPath){
+    public void clearFiles(String workspaceRootPath) {
         File file = new File(workspaceRootPath);
-        if(file.exists()){
+        if (file.exists()) {
             deleteFile(file);
         }
     }
 
-    public void deleteFile(File file){
-        if(file.isDirectory()){
+    public void deleteFile(File file) {
+        if (file.isDirectory()) {
             File[] files = file.listFiles();
-            for(int i=0; i<files.length; i++){
+            for (int i = 0; i < files.length; i++) {
                 deleteFile(files[i]);
             }
         }
