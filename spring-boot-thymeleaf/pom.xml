@@ -19,6 +19,9 @@
         thymeleaf生成静态页
         mybatis plus
         thymeleaf页面交互
+        邮件发送
+        文件处理
+        POI导入导出Excel
     </description>
 
     <properties>
