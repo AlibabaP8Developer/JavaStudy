@@ -10,6 +10,8 @@ common：常用工具类
 
 java8: java基础和Java8新特性
 
+java11： Java11新特性
+
 java-nio：NIO
 
 juc：多线程
@@ -18,11 +20,15 @@ leetcode：leetcode题目案例、面试总结、整理大厂面试题
 
 springboot：springboot demo代码案例、讲义
 
-spring-boot-aliyun：整合了阿里云短信
+spring-boot-aliyun：整合了阿里云短信、阿里云视频点播、阿里云OSS对象存储
 
 spring-boot-rabbitmq：springboot整合rabbit
 
-spring-boot-thymeleaf：springboot整合thymeleaf，生成静态页，实用工具类
+spring-boot-thymeleaf：springboot整合thymeleaf，生成静态页，实用工具类（文件处理，邮件发送，EasyPOI导入导出）
+
+spring-boot-tool：pdf转word工具，文件上传
+
+spring-boot-starter：自定义starter demo
 
 spring-cloud-alibaba：微服务案例
 
@@ -49,6 +55,8 @@ spring-cloud-gateway包含过滤器
 软考资源<br>
 
 资源正在持续更新中...
+
+内容不详细一一列举，有需要可直接看代码，后续待完善后会做一期视频详细演示！！！
 
 # Java
 ## 基础&新特性
