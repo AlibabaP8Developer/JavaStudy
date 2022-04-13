@@ -25,6 +25,11 @@ public class FileController {
     @Value("${config.windowsDir}")
     private String windowsDir;
 
+    /**
+     * 若下载文件没有.zip后缀手动补全
+     * @param pdf
+     * @param response
+     */
     @PostMapping("/pdfToWord")
     public void pdfToWord(@RequestParam("pdf") MultipartFile pdf, HttpServletResponse response) {
         String path = "";
