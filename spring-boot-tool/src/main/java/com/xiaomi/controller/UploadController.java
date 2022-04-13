@@ -38,7 +38,6 @@ public class UploadController {
         }
 
         // 按日期生成相对路径
-        Calendar calendar = Calendar.getInstance();
         String dataPath = "file/" + Calendar.YEAR + "/" + Calendar.MARCH + "/" + Calendar.DAY_OF_MONTH + "/";
         String p = path + dataPath;
         File file = new File(p);
