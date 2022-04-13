@@ -10,12 +10,12 @@ public class PageController {
 
     @GetMapping({"/index.html", "/"})
     public String index() {
-        return "index";
+        return "upload";
     }
 
     @GetMapping({"/upload.html", "/upload"})
     public String upload() {
-        return "upload";
+        return "index";
     }
 
 }
