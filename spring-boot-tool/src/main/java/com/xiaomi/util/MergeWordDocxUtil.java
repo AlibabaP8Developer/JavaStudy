@@ -16,7 +16,6 @@ public class MergeWordDocxUtil {
         System.out.println(docPath);
         Document document = new Document(docPath + "test0.docx");
 
-
         for (int i = 1; i < files.length; i++) {
             document.insertTextFromFile(docPath + "test" + i + ".docx", FileFormat.Docx_2013);
         }
