@@ -3,8 +3,10 @@ package com.xiaomi.controller;
 import com.alibaba.util.R;
 import com.xiaomi.util.CompressUtil;
 import com.xiaomi.util.PdfToWordUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -25,13 +27,18 @@ public class FileController {
     @Value("${config.windowsDir}")
     private String windowsDir;
 
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
     /**
      * 若下载文件没有.zip后缀手动补全
+     *
      * @param pdf
      * @param response
      */
     @PostMapping("/pdfToWord")
     public void pdfToWord(@RequestParam("pdf") MultipartFile pdf, HttpServletResponse response) {
+        String path1 = stringRedisTemplate.opsForValue().get("path");
         String path = "";
         String property = System.getProperty("os.name");
         if (property.equals("Mac OS X")) {
@@ -39,7 +46,7 @@ public class FileController {
         } else if (property.toLowerCase().indexOf("win") > 0) {
             path = windowsDir;
         } else {
-            path = linuxDir;
+            path = linuxDir + path1;
         }
         String docPath = "doc/";
         String splitPath = "split/";
@@ -51,7 +58,7 @@ public class FileController {
         String file = path + originalFilename;
         System.out.println(file);
         Map<String, Object> result = new PdfToWordUtil().pdftoword(file, doc, split);
-        System.out.println("result: "+result);
+        System.out.println("result: " + result);
         String desPath = (String) result.get("desPath");
         try {
             String zipFile = CompressUtil.zipFile(new File(desPath), "zip");
@@ -82,10 +89,10 @@ public class FileController {
                     desPath1.delete();
                 }
             }
-            System.out.println("zipFile: "+zipFile);
-            System.out.println("filename: "+filename);
-            System.out.println("fileName: "+fileName);
-            System.out.println("originalFilename: "+originalFilename);
+            System.out.println("zipFile: " + zipFile);
+            System.out.println("filename: " + filename);
+            System.out.println("fileName: " + fileName);
+            System.out.println("originalFilename: " + originalFilename);
             in.close();
             out.close();
         } catch (Exception e) {
