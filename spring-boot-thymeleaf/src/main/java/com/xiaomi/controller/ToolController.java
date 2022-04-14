@@ -22,10 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -300,13 +297,15 @@ public class ToolController {
 
     /**
      * 生成二维码
-     *
-     * @return
+     * @param info 二维码信息
+     * @param width 二维码宽度
+     * @param height 二维码高度
+     * @param response 下载
      */
     @GetMapping("/qrcode")
-    public String qr(String info, int width, int height) {
-        QRcodeZxingUtil.generateQRcodePic(info, width, height, "jpg", new File("/Users/lizhenghang/Desktop"));
-        return "ok";
+    public void qrcode(String info, int width, int height, HttpServletResponse response) {
+        File file = new File("/Users/lizhenghang/Desktop");
+        QRcodeZxingUtil.generateQRcodePic(info, width, height, "jpg", file);
     }
 
     /**
