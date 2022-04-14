@@ -5,9 +5,10 @@
     <title>PDF转word</title>
 </head>
 <body>
+<span style="color: red; font-size: 25px">注意：上传文件<=50MB</span>
 <form th:action="@{/upload}" method="post" enctype="multipart/form-data">
     <p>
-        请选择一个PDF文件：
+        <span style="color: red; font-size: 25px">请选择一个PDF文件(必选)：</span>
         <input th:type="file" th:name="upload" style="width: 200px">
     </p>
     <p>
