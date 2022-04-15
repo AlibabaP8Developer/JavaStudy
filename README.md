@@ -32,26 +32,26 @@ spring-boot-starter：自定义starter demo
 
 spring-cloud-alibaba：微服务案例
 
-  ｜- eureka-server：集成了eureka，目前使用的nacos，eureka相关配置暂时被屏蔽了，如需使用调整注释中配置信息即可
-  
-  ｜- feign-api：整合了feign远程调用组件
-  
-  ｜- gateway：整合了spring cloud gateway
-  
-  ｜- order-service：订单服务demo
-  
-  ｜- user-service：用户服务demo
-  
-  ｜- doc：sql脚本、nacos文档、使用说明
-  
-  ｜- spring-boot-admin-server：服务监控指标
+｜- eureka-server：集成了eureka，目前使用的nacos，eureka相关配置暂时被屏蔽了，如需使用调整注释中配置信息即可
+
+｜- feign-api：整合了feign远程调用组件
+
+｜- gateway：整合了spring cloud gateway
+
+｜- order-service：订单服务demo
+
+｜- user-service：用户服务demo
+
+｜- doc：sql脚本、nacos文档、使用说明
+
+｜- spring-boot-admin-server：服务监控指标
 
 spring-cloud-gateway包含过滤器
 
 通过网关访问方式：http://localhost:10010/order/102?authorization=admin
 
 服务监控指标：http://localhost:10000/applications
-  
+
 软考资源<br>
 
 资源正在持续更新中...
@@ -59,6 +59,7 @@ spring-cloud-gateway包含过滤器
 内容不详细一一列举，有需要可直接看代码，后续待完善后会做一期视频详细演示！！！
 
 # Github使用小技巧
+
 Edge/Chrome插件：Octotree
 
 使用了 Octotree 之后网页侧边栏会按照树形结构展示项目，可以提高GitHub阅读代码效率
@@ -66,27 +67,36 @@ Edge/Chrome插件：Octotree
 <img src="https://lzhblog.oss-cn-beijing.aliyuncs.com/github.png" width="2000px">
 
 ## Git使用
+
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/git/git.md">Git常用操作</a>
 
 # 代码导航
 
 具体可以根据自己的业务场景简单修改
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-tool/src/main/java/com/xiaomi/controller/FileController.java">PDF转word</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-tool/src/main/java/com/xiaomi/controller/FileController.java">
+PDF转word</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-tool/src/main/java/com/xiaomi/controller/UploadController.java">文件上传</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-tool/src/main/java/com/xiaomi/controller/UploadController.java">
+文件上传</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-thymeleaf/src/main/java/com/xiaomi/controller/MeetingController.java">使用thymeleaf生成静态页（可以根据自己的业务场景自行调整）</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-thymeleaf/src/main/java/com/xiaomi/controller/MeetingController.java">
+使用thymeleaf生成静态页（可以根据自己的业务场景自行调整）</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-thymeleaf/src/main/java/com/xiaomi/util/TemplateUtil.java">使用thymeleaf生成静态页工具类</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-thymeleaf/src/main/java/com/xiaomi/util/TemplateUtil.java">
+使用thymeleaf生成静态页工具类</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-thymeleaf/src/main/java/com/xiaomi/controller/ToolController.java">实用工具：easypoi导入导出、文件批量操作、生成二维码、发送邮件，</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-thymeleaf/src/main/java/com/xiaomi/controller/ToolController.java">
+实用工具：easypoi导入导出、文件批量操作、生成二维码、发送邮件，</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-aliyun/src/main/java/com/xiaomi/controller/SmsController.java">阿里云短信服务</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-aliyun/src/main/java/com/xiaomi/controller/SmsController.java">
+阿里云短信服务</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-aliyun/src/main/java/com/xiaomi/controller/OssController.java">阿里云OSS对象存储</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-aliyun/src/main/java/com/xiaomi/controller/OssController.java">
+阿里云OSS对象存储</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-aliyun/src/main/java/com/xiaomi/controller/VodController.java">阿里云视频点播</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-aliyun/src/main/java/com/xiaomi/controller/VodController.java">
+阿里云视频点播</a>
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/tree/master/java8/src/main/java/com/xiaomi">Java8新特性整理</a>
 
@@ -94,11 +104,14 @@ Edge/Chrome插件：Octotree
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/tree/master/common/src/main/java/com/alibaba/util">实用工具类</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-cloud-alibaba/pom.xml">Spring Cloud Alibaba微服务案例</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-cloud-alibaba/pom.xml">Spring Cloud
+Alibaba微服务案例</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/tree/master/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A7-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%B5%84%E6%96%99">软考高级资料：系统架构设计师</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/tree/master/%E8%BD%AF%E8%80%83%E9%AB%98%E7%BA%A7-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%B5%84%E6%96%99">
+软考高级资料：系统架构设计师</a>
 
 # Java
+
 ## 基础&新特性
 
 <p>
@@ -198,7 +211,9 @@ Edge/Chrome插件：Octotree
 </p>
 
 ## 常用框架
+
 ### Spring
+
 <p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/leetcode/src/main/resources/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/SpringBoot%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%80%BB%E7%BB%93.md">
   SpringBoot常用注解总结.md</a>
@@ -220,6 +235,7 @@ Edge/Chrome插件：Octotree
 </p>
 
 ### SpringCloud
+
 <p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-cloud-alibaba/doc/springcloud/springcloud-intro.md">
 Spring Cloud 入门
@@ -262,7 +278,6 @@ Spring Cloud 入门
   Jmeter使用</a>
 </p>
 
-
 ## 并发
 
 <p>
@@ -276,50 +291,161 @@ Spring Cloud 入门
   Java NIO网络编程</a>
 </p>
 
+# 高性能
+
+## 负载均衡
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/high-mq/load-balancing.md">负载均衡</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/high-mq/read-and-write-separation-and-library-subtable.md">读写分离&分库分表</a>
+</p>
+
 # 数据库
+
 ## MySql
+
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/basis.md">数据库基础知识</a>
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/character-set.md">MySQl字符集</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/a-thousand-lines-of-mysql-study-notes.md">一千行MySQL学习笔记</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/a-thousand-lines-of-mysql-study-notes.md">
+一千行MySQL学习笔记</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/how-sql-executed-in-mysql.md">一条SQL语句在 MySQL 中如何被执行的?</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/how-sql-executed-in-mysql.md">
+一条SQL语句在 MySQL 中如何被执行的?</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/innodb-implementation-of-mvcc.md">InnoDB存储引擎对MVCC的实现</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/innodb-implementation-of-mvcc.md">
+InnoDB存储引擎对MVCC的实现</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-high-performance-optimization-specification-recommendations.md">MySQL 高性能优化规范建议</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-high-performance-optimization-specification-recommendations.md">
+MySQL 高性能优化规范建议</a>
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-index.md">MySQL 索引详解</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-logs.md">MySQL三大日志(binlog、redo log和undo log)详解</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-logs.md">MySQL三大日志(binlog、redo
+log和undo log)详解</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-questions-01.md">MySQL知识点&面试题总结</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-questions-01.md">
+MySQL知识点&面试题总结</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/some-thoughts-on-database-storage-time.md">关于数据库中如何存储时间的一点思考</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/some-thoughts-on-database-storage-time.md">
+关于数据库中如何存储时间的一点思考</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/transaction-isolation-level.md">事务隔离级别(图文详解)</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/transaction-isolation-level.md">
+事务隔离级别(图文详解)</a>
 
 ## Redis
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/Redis/3-commonly-used-cache-read-and-write-strategies.md">3种常用的缓存读写策略</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/Redis/redis-memory-fragmentation.md">Redis 内存碎片</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/Redis/3-commonly-used-cache-read-and-write-strategies.md">
+3种常用的缓存读写策略</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/Redis/redis-questions-01.md">Redis知识点&面试题总结</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/Redis/redis-memory-fragmentation.md">Redis
+内存碎片</a>
+
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/Redis/redis-questions-01.md">
+Redis知识点&面试题总结</a>
 
 # 消息队列
+
 ## RabbitMQ
+
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/RabbitMQ.md">RabbitMQ</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/RabbitMQ%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97.md">RabbitMQ部署指南.md</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/RabbitMQ%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97.md">
+RabbitMQ部署指南.md</a>
 
-<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/rabbitmq-intro.md">RabbitMQ入门、面试总结</a>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/rabbitmq-intro.md">
+RabbitMQ入门、面试总结</a>
 
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/spring-boot-rabbitmq/doc/RabbitMQ-%E9%AB%98%E7%BA%A7%E7%AF%87.md">
 RabbitMQ服务异步通信 高级篇
 </a>
 
+## Kafka
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/high-mq/message-queue/kafka-questions-01.md">Kafka知识点&面试题总结</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/high-mq/message-queue/message-queue.md">消息队列知识点&面试题总结</a>
+</p>
+
+## RocketMQ
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/high-mq/message-queue/rocketmq-intro.md">RocketMQ入门总结</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/high-mq/message-queue/rocketmq-questions.md">RocketMQ常见问题</a>
+</p>
+
+# JVM
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/jvm/class-file-structure.md">类文件结构详解</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/jvm/class-loading-process.md">类加载过程详解</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/jvm/classloader.md">类加载器详解</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/jvm/java-jvm-questions-01.md">Java 内存区域</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/jvm/jdk-monitoring-and-troubleshooting-tools.md">JDK 监控和故障处理工具总结</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/jvm/jvm-garbage-collection.md">JVM 垃圾回收详解</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/jvm/jvm-intro.md">大白话带你认识JVM</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/jvm/jvm-parameters-intro.md">最重要的 JVM 参数总结</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/jvm/memory-area.md">Java 内存区域详解</a>
+</p>
+
+# 多线程
+
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/aqs.md">AQS 原理以及 AQS 同步组件总结</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/atomic-classes.md">Atomic 原子类总结</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/completablefuture-intro.md">CompletableFuture入门</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/java-concurrent-collections.md">Java 常见并发容器总结</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/java-concurrent-questions-01.md">Java 并发常见知识点&面试题总结（基础篇）</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/java-concurrent-questions-02.md">Java 并发常见知识点&面试题总结（进阶篇）</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/java-thread-pool-best-practices.md">Java 线程池最佳实践</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/java-thread-pool-summary.md">Java 线程池详解</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/reentrantlock.md">从ReentrantLock的实现看AQS的原理及应用</a>
+</p>
+<p>
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/concurrent/threadlocal.md">万字解析 ThreadLocal 关键字</a>
+</p>
+
 # 开源项目精选
+
 <p>
   <a href="https://github.com/yangzongzhuan/RuoYi">
     ruoyi单体</a>：一直想做一款后台管理系统，看了很多优秀的开源项目但是发现没有合适的。于是利用空闲休息时间开始自己写了一套后台系统。如此有了若依。她可以用于所有的Web应用程序，如网站管理后台，网站会员中心，CMS，CRM，OA。所有前端后台代码封装过后十分精简易上手，出错概率低。同时支持移动客户端访问。系统会陆续更新一些实用功能。
@@ -353,8 +479,7 @@ RabbitMQ服务异步通信 高级篇
 
 本人大专学历+网络教育本科学历，5年+Java开发经验，平时工作中的学习笔记和开发经验总结归纳，涵盖了Java基础、并发、多线程、高性能、高可用、数据库、redis、数据结构和算法、设计模式、互联网大厂面试经验和面试题
 
-我在大二期间一直坚持每天在csdn写博客，那时候就是随意地在博客平台上发发自己的学习笔记和自己写的程序，积累学习经验和开发经验，将我认为好的资源、学习经验和开发经验向大家分享；
-可能还有人问我在大学期间赚了多少钱？
+我在大二期间一直坚持每天在csdn写博客，那时候就是随意地在博客平台上发发自己的学习笔记和自己写的程序，积累学习经验和开发经验，将我认为好的资源、学习经验和开发经验向大家分享； 可能还有人问我在大学期间赚了多少钱？
 在校期间，我还通过办培训班、接私活、技术培训、编程竞赛等方式变现 20w+，成功实现“经济独立”。我用自己赚的钱去了齐国、楚国、金陵、秦国等地历史古迹旅游，还给家里补贴了很多，减轻了父母的负担。
 
 身边也有很多小伙伴经常问我：“我现在写博客还晚么？”
