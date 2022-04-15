@@ -38,7 +38,7 @@ public class PdfToWordUtil {
                 PdfPageCollection num = pdf.getPages();
 
                 // 2、如果pdf的页数小于31，那么直接进行转化
-                if (num.getCount() <= 300) {
+                if (num.getCount() <= 20) {
                     pdf.saveToFile(desPath, com.spire.pdf.FileFormat.DOCX);
                 }
                 // 3、否则输入的页数比较多，就开始进行切分再转化
