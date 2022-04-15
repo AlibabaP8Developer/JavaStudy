@@ -65,6 +65,9 @@ Edge/Chrome插件：Octotree
 
 <img src="https://lzhblog.oss-cn-beijing.aliyuncs.com/github.png" width="2000px">
 
+## Git使用
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/git/git.md">Git常用操作</a>
+
 # 代码导航
 
 具体可以根据自己的业务场景简单修改
