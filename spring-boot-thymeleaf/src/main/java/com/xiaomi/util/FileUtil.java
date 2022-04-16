@@ -55,8 +55,8 @@ public class FileUtil {
     }
  
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("/Users/lizhenghang/Desktop/封神英雄2 72集");
+        File file = new File("/Users/lizhenghang/Desktop/真心想让你幸福");
 //        FileUtil.fileNameAddTo(file, "【www.baidu.com】");
-        FileUtil.fileNameManage(file, "-", "");
+        FileUtil.fileNameManage(file, "|", "");
     }
 }
