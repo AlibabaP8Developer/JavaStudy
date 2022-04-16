@@ -20,7 +20,7 @@ public class CategoryController {
     private CategoryService categoryService;
 
     @PostMapping
-    public R<String> saveCategory(@RequestBody Category category){
+    public R<String> saveCategory(@RequestBody Category category) {
         categoryService.save(category);
         return R.success("新增分类成功！");
     }
@@ -42,4 +42,11 @@ public class CategoryController {
         categoryService.remove(ids);
         return R.success("分类信息删除成功！");
     }
+
+    @PutMapping("")
+    public R<String> update(@RequestBody Category category) {
+        categoryService.updateById(category);
+        return R.success("修改分类信息成功！");
+    }
+
 }
