@@ -58,6 +58,22 @@ spring-cloud-gateway包含过滤器
 
 内容不详细一一列举，有需要可直接看代码，后续待完善后会做一期视频详细演示！！！
 
+# 项目案例
+
+## 项目一：reggie-take-out：外卖项目案例
+项目描述：
+
+1.springboot、mybatis plus、redis
+
+2.单体项目
+
+3.上传与下载
+
+4.适合小白的项目，刚参加工作可做参考
+
+<img src="https://gulimall-test-demo.oss-cn-beijing.aliyuncs.com/waimai-login.png">
+<img src="https://gulimall-test-demo.oss-cn-beijing.aliyuncs.com/waimai-index.png">
+
 # Github使用小技巧
 
 Edge/Chrome插件：Octotree
