@@ -7,6 +7,7 @@ import java.util.List;
 import java.io.Serializable;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+
 /**
  * 用户信息
  */

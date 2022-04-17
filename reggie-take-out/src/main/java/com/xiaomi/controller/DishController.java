@@ -99,6 +99,7 @@ public class DishController {
 
     /**
      * 根据ID查询菜品信息和对应的口味信息
+     *
      * @param id 菜品ID
      * @return
      */
@@ -108,5 +109,24 @@ public class DishController {
         DishDTO dishDTO = dishService.getByIdWithFlavor(id);
 
         return R.success(dishDTO);
+    }
+
+    /**
+     * 根据条件查询对应的菜品数据
+     * @param dish
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Dish>> list(Dish dish) {
+        Long categoryId = dish.getCategoryId();
+
+        LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(categoryId != null, Dish::getCategoryId, categoryId);
+        // 查询状态为1（在售状态的）
+        queryWrapper.eq(Dish::getStatus, 1);
+        queryWrapper.orderByDesc(Dish::getSort).orderByDesc(Dish::getUpdateTime);
+
+        List<Dish> list = dishService.list(queryWrapper);
+        return R.success(list);
     }
 }
