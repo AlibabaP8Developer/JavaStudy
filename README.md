@@ -80,7 +80,7 @@ Edge/Chrome插件：Octotree
 
 使用了 Octotree 之后网页侧边栏会按照树形结构展示项目，可以提高GitHub阅读代码效率
 
-<img src="https://lzhblog.oss-cn-beijing.aliyuncs.com/github.png" width="2000px">
+<img src="https://gulimall-test-demo.oss-cn-beijing.aliyuncs.com/github.png" width="2000px">
 
 ## Git使用
 
