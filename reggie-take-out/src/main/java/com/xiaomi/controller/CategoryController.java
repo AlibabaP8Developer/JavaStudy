@@ -4,12 +4,12 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xiaomi.common.R;
 import com.xiaomi.pojo.Category;
-import com.xiaomi.pojo.Employee;
 import com.xiaomi.service.CategoryService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -47,6 +47,22 @@ public class CategoryController {
     public R<String> update(@RequestBody Category category) {
         categoryService.updateById(category);
         return R.success("修改分类信息成功！");
+    }
+
+    /**
+     * 根据条件查询分类数据
+     *
+     * @param category
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Category>> list(Category category) {
+        Integer type = category.getType();
+        LambdaQueryWrapper<Category> categoryQueryWrapper = new LambdaQueryWrapper<>();
+        categoryQueryWrapper.eq(type != null, Category::getType, type);
+        categoryQueryWrapper.orderByDesc(Category::getSort);
+        List<Category> list = categoryService.list(categoryQueryWrapper);
+        return R.success(list);
     }
 
 }

@@ -47,7 +47,8 @@ public class CommonController {
         int year = now.getYear();
         int month = now.getMonth().getValue();
         int dayOfMonth = now.getDayOfMonth();
-        path += year + "/" + month + "/" + dayOfMonth + "/";
+        String datePath = year + "/" + month + "/" + dayOfMonth + "/";
+        path += datePath;
 
         // 原始文件名
         String originalFilename = file.getOriginalFilename();
@@ -68,7 +69,7 @@ public class CommonController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return R.success(fileName);
+        return R.success(datePath + fileName);
     }
 
     /**
@@ -88,12 +89,6 @@ public class CommonController {
         } else {
             path = linuxDir;
         }
-
-        LocalDate now = LocalDate.now();
-        int year = now.getYear();
-        int month = now.getMonth().getValue();
-        int dayOfMonth = now.getDayOfMonth();
-        path += year + "/" + month + "/" + dayOfMonth + "/";
 
         try {
             // 通过输入流读取文件内容
