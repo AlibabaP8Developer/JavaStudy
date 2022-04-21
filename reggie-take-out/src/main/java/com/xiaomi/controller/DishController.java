@@ -6,6 +6,7 @@ import com.xiaomi.common.R;
 import com.xiaomi.dto.DishDTO;
 import com.xiaomi.pojo.Category;
 import com.xiaomi.pojo.Dish;
+import com.xiaomi.pojo.DishFlavor;
 import com.xiaomi.service.CategoryService;
 import com.xiaomi.service.DishFlavorService;
 import com.xiaomi.service.DishService;
@@ -117,6 +118,39 @@ public class DishController {
      * @return
      */
     @GetMapping("/list")
+    public R<List<DishDTO>> list1(Dish dish) {
+        Long categoryId = dish.getCategoryId();
+
+        LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(categoryId != null, Dish::getCategoryId, categoryId);
+        // 查询状态为1（在售状态的）
+        queryWrapper.eq(Dish::getStatus, 1);
+        queryWrapper.orderByDesc(Dish::getSort).orderByDesc(Dish::getUpdateTime);
+
+        List<Dish> list = dishService.list(queryWrapper);
+
+        List<DishDTO> dishDTOList = list.stream().map(item -> {
+            DishDTO dishDTO = new DishDTO();
+            BeanUtils.copyProperties(item, dishDTO);
+
+            Long categoryIds = item.getCategoryId();
+            Category category = categoryService.getById(categoryIds);
+            String categoryName = category.getName();
+            dishDTO.setCategoryName(categoryName);
+
+            // 菜品ID
+            Long dishId = item.getId();
+            LambdaQueryWrapper<DishFlavor> lambdaQueryWrapper = new LambdaQueryWrapper();
+            lambdaQueryWrapper.eq(DishFlavor::getDishId, dishId);
+            List<DishFlavor> dishFlavorList = dishFlavorService.list(lambdaQueryWrapper);
+            dishDTO.setFlavors(dishFlavorList);
+            return dishDTO;
+        }).collect(Collectors.toList());
+
+        return R.success(dishDTOList);
+    }
+
+    @Deprecated
     public R<List<Dish>> list(Dish dish) {
         Long categoryId = dish.getCategoryId();
 
