@@ -6,6 +6,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+// 开启SpringCache缓存
 @EnableCaching
 // 开启事务
 @EnableTransactionManagement

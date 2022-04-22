@@ -73,6 +73,8 @@ spring-cloud-gateway包含过滤器
 
   APP：http://localhost:8080/front/index.html
 
+  swagger接口文档：http://localhost:8080/doc.html
+
 5.适合小白的项目，刚参加工作可做参考
 
 6.Linux文档
