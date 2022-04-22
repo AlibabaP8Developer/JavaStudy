@@ -10,6 +10,10 @@ spring:
       url: jdbc:mysql://139.198.181.54:3306/leetcode?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
       username: root
       password: 123456
+  redis:
+    host: 139.198.181.54
+    port: 6379
+    password: 123456
 
 mybatis-plus:
   configuration:
