@@ -69,7 +69,11 @@ spring-cloud-gateway包含过滤器
 
 3.上传与下载
 
-4.适合小白的项目，刚参加工作可做参考
+4.管理后台：http://localhost:8080/backend/index.html
+
+  APP：http://localhost:8080/front/index.html
+
+5.适合小白的项目，刚参加工作可做参考
 
 <img src="https://gulimall-test-demo.oss-cn-beijing.aliyuncs.com/waimai-login.png">
 <img src="https://gulimall-test-demo.oss-cn-beijing.aliyuncs.com/waimai-index.png">
