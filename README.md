@@ -75,6 +75,11 @@ spring-cloud-gateway包含过滤器
 
 5.适合小白的项目，刚参加工作可做参考
 
+6.Linux文档
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/reggie-take-out/doc/linux.md">Linux部署文档1</a>
+
+<a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/reggie-take-out/doc/Linux%E9%83%A8%E7%BD%B2%E6%96%87%E6%A1%A3.md">Linux部署文档2</a>
+
 <img src="https://gulimall-test-demo.oss-cn-beijing.aliyuncs.com/waimai-login.png">
 <img src="https://gulimall-test-demo.oss-cn-beijing.aliyuncs.com/waimai-index.png">
 
