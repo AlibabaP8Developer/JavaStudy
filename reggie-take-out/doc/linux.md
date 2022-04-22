@@ -23,4 +23,13 @@ vim /usr/local/apache-maven-3.5.4/conf/settings.xml
 修改配置文件内容:
 <localRepository>/usr/local/repository</localRepository>
 ```
-(4) 将资料中提供的MySQL安装包上传到Linux并解压
+(4) 将doc中提供的shell脚本上传到Linux
+(5) 为用户授权
+```shell
+chmod命令是控制用户对文件的权限的命令
+r（读）、w（写）、x（执行）
+chmod 777 xxx.sh 为所有用户授予读写、执行权限
+chmod 755 xxx.sh 为文件拥有者授予读、写、执行权限，同组用户和其他用户授予读、执行权限
+chmod 210 xxx.sh 为文件拥有者授予写权限，同组用户授予执行权限，其他用户没有任何权限
+```
+
