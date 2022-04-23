@@ -93,7 +93,7 @@ public class DishController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "page", value = "页码", required=true),
             @ApiImplicitParam(name = "pageSize", value = "每页记录数", required=true),
-            @ApiImplicitParam(name = "name", value = "套餐名称", required=false)
+            @ApiImplicitParam(name = "name", value = "菜品名称", required=false)
     })
     @GetMapping("/page")
     public R<Page> page(int page, int pageSize, String name) {

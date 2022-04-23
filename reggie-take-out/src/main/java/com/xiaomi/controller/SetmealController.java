@@ -9,6 +9,10 @@ import com.xiaomi.pojo.Setmeal;
 import com.xiaomi.service.CategoryService;
 import com.xiaomi.service.SetmealDishService;
 import com.xiaomi.service.SetmealService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -23,6 +27,7 @@ import java.util.stream.Collectors;
 /**
  * 套餐管理
  */
+@Api(tags = "套餐相关接口")
 @Slf4j
 @RestController
 @RequestMapping("/setmeal")
@@ -37,6 +42,12 @@ public class SetmealController {
     @Autowired
     private CategoryService categoryService;
 
+    @ApiOperation(value = "套餐信息的分页查询接口")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "page", value = "页码", required=true),
+            @ApiImplicitParam(name = "pageSize", value = "每页记录数", required=true),
+            @ApiImplicitParam(name = "name", value = "套餐名称", required=false)
+    })
     @GetMapping("/page")
     public R<Page> page(int page, int pageSize, String name) {
         // 分页构造器

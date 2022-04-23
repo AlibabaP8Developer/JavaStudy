@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>黑马点评</title>
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="./css/element.css">
+
+  <link href="./css/index.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
+
+  <style type="text/css">
+      .el-input__inner{
+          border-radius: 20px;
+      }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="search-bar">
+    <div class="city-btn">杭州 <i class="el-icon-arrow-down"></i></div>
+    <div class="search-input">
+      <el-input size="mini" placeholder="请输入商户名、地点">
+        <i slot="prefix" class="el-input__icon el-icon-search"></i>
+      </el-input>
+    </div>
+    <div class="header-icon" @click="toPage(4)"> <i class="el-icon-user"></i></div>
+  </div>
+  <div class="type-list">
+    <div class="type-box" v-for="t in types" :key="t.id" @click="toShopList(t.id, t.name)">
+      <div class="type-view"><img :src="'/imgs/' + t.icon" alt=""></div>
+      <div class="type-text">{{t.name}}</div>
+    </div>
+  </div>
+  <div class="blog-list" @scroll="onScroll">
+    <div class="blog-box" v-for="b in blogs" :key="b.id">
+      <div class="blog-img"><img :src="b.img" alt=""></div>
+      <div class="blog-title">{{b.title}}</div>
+      <div class="blog-foot">
+        <div class="blog-user-icon"><img :src="b.icon || '/imgs/icons/default-icon.png'" alt=""></div>
+        <div class="blog-user-name">{{b.name}}</div>
+        <div class="blog-liked"><img src="/imgs/thumbup.png" alt="">{{b.liked}}</div>
+      </div>
+    </div>
+  </div>
+  <foot-bar :active-btn="1"></foot-bar>
+</div>
+<script src="./js/vue.js"></script>
+<script src="./js/axios.min.js"></script>
+<!-- 引入组件库 -->
+<script src="./js/element.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/footer.js"></script>
+<script>
+
+  const app = new Vue({
+    el: "#app",
+    data: {
+      isReachBottom: false,
+      types: [], // 类型列表
+      blogs: [
+        {id: 1, img: "/imgs/blogs/blog1.jpg", title:"杭州周末好去处｜💰50就可以骑马啦🐎", icon: "/imgs/icons/icon1.jpg", name: "小鱼同学", liked: 34},
+        {id: 2, img: "/imgs/blogs/blog1.jpg", title:"杭州周末好去处｜💰50就可以骑马啦🐎", icon: "", name: "小鱼同学", liked: 34},
+        {id: 3, img: "/imgs/blogs/blog1.jpg", title:"杭州周末好去处｜💰50就可以骑马啦🐎", icon: "", name: "小鱼同学", liked: 34},
+        {id: 4, img: "/imgs/blogs/blog1.jpg", title:"杭州周末好去处｜💰50就可以骑马啦🐎", icon: "", name: "小鱼同学", liked: 34},
+        {id: 5, img: "/imgs/blogs/blog1.jpg", title:"杭州周末好去处｜💰50就可以骑马啦🐎", icon: "", name: "小鱼同学", liked: 34},
+        {id: 6, img: "/imgs/blogs/blog1.jpg", title:"杭州周末好去处｜💰50就可以骑马啦🐎", icon: "", name: "小鱼同学", liked: 34},
+      ], // 播客列表
+    },
+    created() {
+      // 查询类型
+      this.queryTypes();
+    },
+    methods: {
+      queryTypes(){
+        axios.get("/shop-type/list")
+        .then(( {data}) => {
+          this.types = data;
+        })
+        .catch(err => {
+          console.log(err);
+          this.$message.error(err)
+        })
+      },
+      onScroll(e) {
+        let scrollTop = e.target.scrollTop;
+        let offsetHeight = e.target.offsetHeight;
+        let scrollHeight = e.target.scrollHeight;
+        if(scrollTop + offsetHeight > scrollHeight && !this.isReachBottom){
+          this.isReachBottom = true
+          console.log("触底")
+          // TODO 再次查询下一页数据
+        }else{
+          this.isReachBottom = false
+        }
+      },
+      toLogin(){
+
+      },
+      toShopList(id, name) {
+        location.href = "/shop-list.html?type=" + id + "&name=" + name
+      }
+    }
+  })
+</script>
+</body>
+</html>
