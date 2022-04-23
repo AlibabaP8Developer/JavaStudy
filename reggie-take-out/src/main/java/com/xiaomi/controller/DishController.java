@@ -10,6 +10,10 @@ import com.xiaomi.pojo.DishFlavor;
 import com.xiaomi.service.CategoryService;
 import com.xiaomi.service.DishFlavorService;
 import com.xiaomi.service.DishService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -24,6 +28,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+@Api(tags = "菜品管理")
 @Slf4j
 @RestController
 @RequestMapping("/dish")
@@ -84,6 +89,12 @@ public class DishController {
      * @param name
      * @return
      */
+    @ApiOperation(value = "菜品信息的分页查询接口")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "page", value = "页码", required=true),
+            @ApiImplicitParam(name = "pageSize", value = "每页记录数", required=true),
+            @ApiImplicitParam(name = "name", value = "套餐名称", required=false)
+    })
     @GetMapping("/page")
     public R<Page> page(int page, int pageSize, String name) {
         // 构造分页构造器对象

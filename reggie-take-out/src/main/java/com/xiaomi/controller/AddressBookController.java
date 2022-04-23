@@ -6,6 +6,8 @@ import com.xiaomi.common.BaseContext;
 import com.xiaomi.common.R;
 import com.xiaomi.pojo.AddressBook;
 import com.xiaomi.service.AddressBookService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,7 @@ import java.util.List;
 /**
  * 地址簿管理
  */
+@Api(tags = "地址簿管理")
 @Slf4j
 @RestController
 @RequestMapping("/addressBook")
@@ -26,6 +29,7 @@ public class AddressBookController {
     /**
      * 新增
      */
+    @ApiOperation(value = "地址簿新增")
     @PostMapping
     public R<AddressBook> save(@RequestBody AddressBook addressBook) {
         addressBook.setUserId(BaseContext.getCurrentId());
