@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  * @since 2021-12-22
  */
 @RestController
-@RequestMapping("/api/shop")
+@RequestMapping("/shop")
 public class ShopController {
 
     @Resource

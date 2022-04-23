@@ -14,7 +14,7 @@ import java.util.UUID;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/upload")
+@RequestMapping("/upload")
 public class UploadController {
 
     @PostMapping("blog")

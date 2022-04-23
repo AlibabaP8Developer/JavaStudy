@@ -1,15 +1,16 @@
 package com.github.utils;
 
+import com.github.dto.UserDTO;
 import com.github.pojo.User;
 
 public class UserHolder {
-    private static final ThreadLocal<User> tl = new ThreadLocal<>();
+    private static final ThreadLocal<UserDTO> tl = new ThreadLocal<>();
 
-    public static void saveUser(User userId){
+    public static void saveUser(UserDTO userId){
         tl.set(userId);
     }
 
-    public static User getUser(){
+    public static UserDTO getUser(){
         return tl.get();
     }
 

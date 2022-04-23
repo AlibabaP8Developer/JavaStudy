@@ -3,6 +3,7 @@ package com.github.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.dto.Result;
+import com.github.dto.UserDTO;
 import com.github.pojo.Blog;
 import com.github.pojo.User;
 import com.github.service.IBlogService;
@@ -23,7 +24,7 @@ import java.util.List;
  * @since 2021-12-22
  */
 @RestController
-@RequestMapping("/api/blog")
+@RequestMapping("/blog")
 public class BlogController {
 
     @Resource
@@ -34,7 +35,7 @@ public class BlogController {
     @PostMapping
     public Result saveBlog(@RequestBody Blog blog) {
         // 获取登录用户
-        User user = UserHolder.getUser();
+        UserDTO user = UserHolder.getUser();
         blog.setUserId(user.getId());
         // 保存探店博文
         blogService.save(blog);
@@ -53,7 +54,7 @@ public class BlogController {
     @GetMapping("/of/me")
     public Result queryMyBlog(@RequestParam(value = "current", defaultValue = "1") Integer current) {
         // 获取登录用户
-        User user = UserHolder.getUser();
+        UserDTO user = UserHolder.getUser();
         // 根据用户查询
         Page<Blog> page = blogService.query()
                 .eq("user_id", user.getId()).page(new Page<>(current, SystemConstants.MAX_PAGE_SIZE));

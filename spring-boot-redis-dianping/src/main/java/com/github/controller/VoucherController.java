@@ -16,7 +16,7 @@ import javax.annotation.Resource;
  * @since 2021-12-22
  */
 @RestController
-@RequestMapping("/api/voucher")
+@RequestMapping("/voucher")
 public class VoucherController {
 
     @Resource

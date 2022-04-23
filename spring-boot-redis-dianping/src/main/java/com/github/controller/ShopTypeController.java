@@ -19,7 +19,7 @@ import java.util.List;
  * @since 2021-12-22
  */
 @RestController
-@RequestMapping("/api/shop-type")
+@RequestMapping("/shop-type")
 public class ShopTypeController {
     @Resource
     private IShopTypeService typeService;
