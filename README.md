@@ -346,35 +346,47 @@ Spring Cloud 入门
 
 ## MySql
 
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/basis.md">数据库基础知识</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/character-set.md">MySQl字符集</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/a-thousand-lines-of-mysql-study-notes.md">
 一千行MySQL学习笔记</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/how-sql-executed-in-mysql.md">
 一条SQL语句在 MySQL 中如何被执行的?</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/innodb-implementation-of-mvcc.md">
 InnoDB存储引擎对MVCC的实现</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-high-performance-optimization-specification-recommendations.md">
 MySQL 高性能优化规范建议</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-index.md">MySQL 索引详解</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-logs.md">MySQL三大日志(binlog、redo
 log和undo log)详解</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/mysql-questions-01.md">
 MySQL知识点&面试题总结</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/some-thoughts-on-database-storage-time.md">
 关于数据库中如何存储时间的一点思考</a>
-
+</p>
+<p>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/mysql/transaction-isolation-level.md">
 事务隔离级别(图文详解)</a>
+</p>
 
 ## Redis
 
