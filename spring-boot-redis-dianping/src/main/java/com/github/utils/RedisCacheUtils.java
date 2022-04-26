@@ -132,9 +132,10 @@ public class RedisCacheUtils {
 
         LocalDateTime expireTime = redisData.getExpireTime();
         // 5.命中需要判断是否过期
-        if (expireTime.isAfter(LocalDateTime.now())) {
+        boolean after = expireTime.isAfter(LocalDateTime.now());
+        if (after) {
             // 5.1 未过期，直接返回店铺
-            return null;
+            return r;
         }
 
         // 5.2 已过期，需要缓存重建
