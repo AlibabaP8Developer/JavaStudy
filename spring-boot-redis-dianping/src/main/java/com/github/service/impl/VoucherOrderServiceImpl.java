@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
  * @author 虎哥
@@ -33,7 +33,6 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
     private RedisIdWorker idWorker;
 
     @Override
-    @Transactional
     public Result seckillVoucher(Long voucherId) {
 
         // 1.查询优惠券信息
@@ -61,28 +60,47 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
             return Result.fail("库存不足！");
         }
 
-        // 5.扣减库存
-        boolean success = seckillVoucherService.update().setSql("stock = stock - 1")
-                .eq("voucher_id", voucherId)
-                .update();
+        // 7.返回订单id
+        return createVoucher(voucherId);
+    }
 
-        if (!success) {
-            // 扣减失败
-            return Result.fail("库存不足！");
-        }
-        // 6.创建订单
-        VoucherOrder voucherOrder = new VoucherOrder();
-        // 订单id
-        long orderId = idWorker.nextId("order");
-        voucherOrder.setVoucherId(orderId);
+    @Transactional
+    public Result createVoucher(Long voucherId) {
+        // 5.一人一单
         // 用户id
         Long userId = UserHolder.getUser().getId();
-        voucherOrder.setUserId(userId);
-        // 代金券id
-        voucherOrder.setVoucherId(voucherId);
-        this.save(voucherOrder);
 
-        // 7.返回订单id
-        return Result.ok(orderId);
+        synchronized (userId.toString()) {
+            // 查询订单
+            int count = query().eq("user_id", userId)
+                    .eq("voucher_id", voucherId).count();
+            // 判断是否存在
+            if (count > 0) {
+                // 用户已经购买过了
+                return Result.fail("用户已经购买过了！ ");
+            }
+
+            // 6.扣减库存
+            boolean success = seckillVoucherService.update().setSql("stock = stock - 1")
+                    .eq("voucher_id", voucherId)
+                    .gt("stock", 0)
+                    .update();
+
+            if (!success) {
+                // 扣减失败
+                return Result.fail("库存不足！");
+            }
+
+            // 7.创建订单
+            VoucherOrder voucherOrder = new VoucherOrder();
+            // 7.1订单id
+            long orderId = idWorker.nextId("order");
+            voucherOrder.setId(orderId);
+            voucherOrder.setUserId(userId);
+            // 7.2代金券id
+            voucherOrder.setVoucherId(voucherId);
+            this.save(voucherOrder);
+            return Result.ok(orderId);
+        }
     }
 }
