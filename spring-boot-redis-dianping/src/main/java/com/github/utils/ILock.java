@@ -16,4 +16,9 @@ public interface ILock {
      * 	del th1
      */
     void unlock();
+
+    /**
+     * 基于lua脚本释放锁
+     */
+    void unlockLua();
 }

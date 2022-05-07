@@ -173,7 +173,7 @@ public class RedisCacheUtils {
      * @return boolean
      */
     private boolean tryLock(String key) {
-        // setIfAbsent 如果存在
+        // setIfAbsent 如果不存在
         Boolean flag = stringRedisTemplate.opsForValue().setIfAbsent(key, "1",
                 10, TimeUnit.SECONDS);
         return BooleanUtil.isTrue(flag);
