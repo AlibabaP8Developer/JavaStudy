@@ -7,9 +7,11 @@ import com.github.dto.Result;
 import com.github.dto.UserDTO;
 import com.github.pojo.Blog;
 import com.github.mapper.BlogMapper;
+import com.github.pojo.Follow;
 import com.github.pojo.User;
 import com.github.service.IBlogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.github.service.IFollowService;
 import com.github.service.IUserService;
 import com.github.utils.RedisConstants;
 import com.github.utils.SystemConstants;
@@ -36,6 +38,8 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
 
     @Resource
     private IUserService userService;
+    @Resource
+    private IFollowService followService;
     @Resource
     private StringRedisTemplate stringRedisTemplate;
 
@@ -132,6 +136,30 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
                 .collect(Collectors.toList());
         // 4 返回
         return Result.ok(userDTOS);
+    }
+
+    @Override
+    public Result saveBlog(Blog blog) {
+        // 获取登录用户
+        UserDTO user = UserHolder.getUser();
+        blog.setUserId(user.getId());
+        // 保存探店博文
+        boolean isSuccess = this.save(blog);
+        if (!isSuccess) {
+            return Result.fail("新增笔记失败!");
+        }
+        // 查询笔记作者的所有粉丝
+        List<Follow> follows = followService.query().eq("follow_user_id", user.getId()).list();
+        // 推送笔记ID给所有粉丝
+        follows.forEach(follow -> {
+            // 获取粉丝id
+            Long userId = follow.getUserId();
+            // 推送
+            String key = "feed:" + userId;
+            stringRedisTemplate.opsForZSet().add(key, blog.getId().toString(), System.currentTimeMillis());
+        });
+        // 返回id
+        return Result.ok(blog.getId());
     }
 
     private void queryBlogUser(Blog blog) {
