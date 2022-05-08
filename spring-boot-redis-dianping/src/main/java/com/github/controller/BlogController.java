@@ -45,10 +45,14 @@ public class BlogController {
 
     @PutMapping("/like/{id}")
     public Result likeBlog(@PathVariable("id") Long id) {
-        // 修改点赞数量
-        blogService.update()
-                .setSql("liked = liked + 1").eq("id", id).update();
-        return Result.ok();
+        /*
+            同一个用户只能点赞一次，再次点击取消点赞
+            如果当前用户已经点赞，则点赞按钮高亮显示
+            实现步骤：
+            给blog类中添加isLike字段，标识是否被当前用户点赞
+            修改点赞功能，利用redis的set集合判断是否点赞过，未点赞过则点赞数+1，已点赞过则点赞数-1
+         */
+        return blogService.likeBlog(id);
     }
 
     @GetMapping("/of/me")
