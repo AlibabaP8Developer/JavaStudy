@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.bean.copier.CopyOptions;
 import cn.hutool.core.lang.UUID;
 import cn.hutool.core.util.RandomUtil;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.dto.LoginFormDTO;
 import com.github.dto.Result;
@@ -95,7 +96,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
                 new HashMap<>(),
                 CopyOptions.create()
                         .setIgnoreNullValue(true)
-                        .setFieldValueEditor((fieldName, fieldValue) -> fieldValue.toString()));
+                        .setFieldValueEditor((fieldName, fieldValue) -> {
+                            System.out.println("fieldName:"+fieldName+", fieldValue:"+fieldValue);
+                            return StringUtils.isNotBlank(fieldValue.toString())?fieldValue.toString():"1";
+                        }));
 
         // 7.3保存数据redis
         //session.setAttribute("user", BeanUtil.copyProperties(user, UserDTO.class));
