@@ -94,4 +94,16 @@ public class BlogController {
         List<Blog> records = page.getRecords();
         return Result.ok(records);
     }
+
+    /**
+     * 实现滚动分页查询
+     * @param max 上一次查询最小时间，本次查询的最大时间
+     * @param offset 偏移量
+     * @return
+     */
+    @GetMapping("/of/follow")
+    public Result queryBlogOfFollow(@RequestParam(value = "lastId") Long max,
+                                    @RequestParam(value = "offset", defaultValue = "0") Long offset) {
+        return blogService.queryBlogOfFollow(max, offset);
+    }
 }

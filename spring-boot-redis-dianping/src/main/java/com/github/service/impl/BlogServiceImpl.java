@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.dto.Result;
+import com.github.dto.ScrollResult;
 import com.github.dto.UserDTO;
 import com.github.pojo.Blog;
 import com.github.mapper.BlogMapper;
@@ -17,9 +18,11 @@ import com.github.utils.RedisConstants;
 import com.github.utils.SystemConstants;
 import com.github.utils.UserHolder;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.data.redis.core.ZSetOperations;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
@@ -155,11 +158,66 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
             // 获取粉丝id
             Long userId = follow.getUserId();
             // 推送
-            String key = "feed:" + userId;
+            String key = RedisConstants.FEED_KEY + userId;
             stringRedisTemplate.opsForZSet().add(key, blog.getId().toString(), System.currentTimeMillis());
         });
         // 返回id
         return Result.ok(blog.getId());
+    }
+
+    /**
+     * 实现滚动分页查询
+     *
+     * @param max    上一次查询最小时间，本次查询的最大时间
+     * @param offset 偏移量
+     * @return
+     */
+    @Override
+    public Result queryBlogOfFollow(Long max, Long offset) {
+        // 1.获取当前用户
+        Long userId = UserHolder.getUser().getId();
+        // 2.查询收件箱
+        String key = RedisConstants.FEED_KEY + userId;
+        Set<ZSetOperations.TypedTuple<String>> typedTuples = stringRedisTemplate.opsForZSet().reverseRangeByScoreWithScores(key, 0, max, offset, 3);
+        if (typedTuples == null || typedTuples.isEmpty()) {
+            return Result.ok();
+        }
+        // 3.解析数据 blogId, score（时间戳）,offset
+        List<Long> ids = new ArrayList<>(typedTuples.size());
+        long minTime = 0L;
+        int os = 1;
+        for (ZSetOperations.TypedTuple<String> typedTuple : typedTuples) { // 54422
+            // 获取ID
+            String idStr = typedTuple.getValue();
+            if (idStr != null) {
+                ids.add(Long.valueOf(idStr));
+            }
+
+            // 获取分数（时间戳）
+            long time = typedTuple.getScore().longValue();
+            if (time == minTime) {
+                os++;
+            } else {
+                minTime = time;
+                os = 1;
+            }
+        }
+        // 4.根据ID查询blog
+        String idStr = StrUtil.join(",", ids);
+        List<Blog> blogs = query().in("id", ids).last("order by field(id," + idStr + ")").list();
+        for (Blog blog : blogs) {
+            // 查询blog有关的用户
+            queryBlogUser(blog);
+            // 查询blog是否被点赞
+            isBLogLiked(blog);
+        }
+
+        // 5.封装并返回
+        ScrollResult result = new ScrollResult();
+        result.setList(blogs);
+        result.setOffset(os);
+        result.setMinTime(minTime);
+        return Result.ok(result);
     }
 
     private void queryBlogUser(Blog blog) {
