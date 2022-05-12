@@ -15,12 +15,15 @@ import com.github.service.IUserService;
 import com.github.utils.RedisConstants;
 import com.github.utils.RegexUtils;
 import com.github.utils.SystemConstants;
+import com.github.utils.UserHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -97,8 +100,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
                 CopyOptions.create()
                         .setIgnoreNullValue(true)
                         .setFieldValueEditor((fieldName, fieldValue) -> {
-                            System.out.println("fieldName:"+fieldName+", fieldValue:"+fieldValue);
-                            return StringUtils.isNotBlank(fieldValue.toString())?fieldValue.toString():"1";
+                            System.out.println("fieldName:" + fieldName + ", fieldValue:" + fieldValue);
+                            return StringUtils.isNotBlank(fieldValue.toString()) ? fieldValue.toString() : "1";
                         }));
 
         // 7.3保存数据redis
@@ -108,6 +111,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         stringRedisTemplate.expire(tokenKey, RedisConstants.LOGIN_TOKEN_TTL, TimeUnit.MINUTES);
         // 8.返回token
         return Result.ok(token);
+    }
+
+    @Override
+    public Result sign() {
+        // 1.获取当前登陆用户
+        Long userId = UserHolder.getUser().getId();
+        // 2.获取日期
+        LocalDateTime now = LocalDateTime.now();
+        // 3.拼接key
+        String keySuffix = now.format(DateTimeFormatter.ofPattern(":yyyyMM"));
+        String key = RedisConstants.USESR_SIGN_KEY + userId + keySuffix;
+        // 4.获取今天是本月的第几天
+        int dayOfMonth = now.getDayOfMonth();
+        // 5.写入redis， setbit key offset
+        stringRedisTemplate.opsForValue().setBit(key, dayOfMonth - 1, true);
+        return Result.ok();
     }
 
     private User createUserWithPhone(String phone) {

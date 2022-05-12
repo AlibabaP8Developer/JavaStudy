@@ -8,6 +8,7 @@ public class RedisConstants {
     public static final String BLOG_LIKED_KEY = "blog:liked:";
     public static final String FEED_KEY = "feed:";
     public static final String SHOP_GEO_KEY = "shop:geo:";
+    public static final String USESR_SIGN_KEY = "sign:";
 
     public static final Long LOGIN_CODE_TTL = 2L;
     public static final Long LOGIN_TOKEN_TTL = 30L;
