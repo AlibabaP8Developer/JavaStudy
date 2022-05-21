@@ -1,0 +1,34 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: boot-thymeleaf
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+#    139.198.181.54
+    url: jdbc:mysql://localhost:3306/chat?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+  thymeleaf:
+    servlet:
+      content-type: text/html;
+    suffix: .html
+    prefix: classpath:/templates/
+    encoding: UTF-8
+    mode: HTML
+    cache: false
+  mvc:
+    static-path-pattern: /**
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.github.pojo
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: ASSIGN_ID

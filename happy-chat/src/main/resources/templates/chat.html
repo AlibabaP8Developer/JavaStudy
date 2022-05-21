@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>与好友聊天</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="./plugins/element-ui/index.css"/>
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/icon/iconfont.css"/>
+    <style>
+        .body {
+            min-width: 1366px;
+        }
+    </style>
+    <script>
+        var websocket = null;
+        if(window.WebSocket){
+            websocket = new WebSocket("ws://127.0.0.1:9001/ws");
+
+            websocket.onopen = function (){
+                console.log("connected.");
+            }
+            websocket.onclose = function (){
+                console.log("closed");
+            }
+            websocket.onmessage = function (e){
+                console.log("received server message: " + e.data);
+                var server_message = document.getElementById("server_message");
+                server_message.innerHTML += e.data + "<br/>";
+            }
+        }
+        else {
+            alert("current web not support web socket");
+        }
+
+        function sendMsg(){
+            var message = document.getElementById("message");
+            websocket.send(message.value);
+        }
+    </script>
+</head>
+<body>
+<div id="app" style="margin-left: 20px">
+    <p>当前用户：{{userId}}</p>
+    接收到的消息：
+    <p id="server_message" style="background-color: aliceblue">
+        {{msg}}
+    </p>
+
+    <p>
+        <input type="text" id="message">
+    </p>
+    <p>
+        <input type="button" value="发送消息" onclick="sendMsg()">
+    </p>
+</div>
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="./plugins/vue/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="./plugins/element-ui/index.js"></script>
+<!-- 引入axios -->
+<script src="./plugins/axios/axios.min.js"></script>
+<script src="./js/request.js"></script>
+<script src="./js/validate.js"></script>
+<script src="./api/login.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                userId: '',
+                msg: ''
+            }
+        },
+        mounted() {
+            this.init()
+        },
+        methods: {
+            async init() {
+                // const params = {
+                //     page: this.page,
+                //     pageSize: this.pageSize,
+                //     name: this.input ? this.input : undefined
+                // }
+                await getUserIdApi().then(res => {
+                    this.userId = res.data.username
+                }).catch(err => {
+                    this.$message.error('请求出错了：' + err)
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>
