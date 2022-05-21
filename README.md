@@ -22,6 +22,8 @@ springboot：springboot demo代码案例、讲义
 
 spring-boot-aliyun：整合了阿里云短信、阿里云视频点播、阿里云OSS对象存储
 
+happy-chat：基于Netty聊天室
+
 spring-boot-rabbitmq：springboot整合rabbit
 
 spring-boot-thymeleaf：springboot整合thymeleaf，生成静态页，实用工具类（文件处理，邮件发送，EasyPOI导入导出）
@@ -84,6 +86,10 @@ spring-cloud-gateway包含过滤器
 
 <img src="https://gulimall-test-demo.oss-cn-beijing.aliyuncs.com/waimai-login.png">
 <img src="https://gulimall-test-demo.oss-cn-beijing.aliyuncs.com/waimai-index.png">
+
+## 项目二：happy-chat：Netty聊天室
+访问地址：http://localhost:8090/templates/chat.html
+![img.png](happy-chat/src/main/resources/templates/images/img.png)
 
 # Github使用小技巧
 
