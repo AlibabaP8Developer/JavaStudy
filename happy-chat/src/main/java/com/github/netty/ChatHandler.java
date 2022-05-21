@@ -9,6 +9,8 @@ import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import io.netty.util.concurrent.GlobalEventExecutor;
 import java.text.SimpleDateFormat;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -17,8 +19,6 @@ import java.util.Date;
  */
 public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
     private static ChannelGroup clients = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
-    private SimpleDateFormat sdf =  new SimpleDateFormat("yyyy-mm-dd hh:MM");
-
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
@@ -26,7 +26,9 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
         System.out.println("接收到消息为： " + text);
 
         for(Channel client : clients){
-            client.writeAndFlush(new TextWebSocketFrame(sdf.format(new Date()) + ":" + text));
+            LocalDateTime now = LocalDateTime.now();
+            String format = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+            client.writeAndFlush(new TextWebSocketFrame(format + ":  " + text));
         }
     }
 
