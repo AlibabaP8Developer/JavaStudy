@@ -7,6 +7,7 @@ import com.github.common.UserEnums;
 import com.github.pojo.User;
 import com.github.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 

@@ -7,11 +7,9 @@ import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 import io.netty.util.concurrent.GlobalEventExecutor;
-import java.text.SimpleDateFormat;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 /**
  * 处理消息的handler
@@ -25,7 +23,7 @@ public class ChatHandler extends SimpleChannelInboundHandler<TextWebSocketFrame>
         String text = msg.text();
         System.out.println("接收到消息为： " + text);
 
-        for(Channel client : clients){
+        for (Channel client : clients) {
             LocalDateTime now = LocalDateTime.now();
             String format = now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
             client.writeAndFlush(new TextWebSocketFrame(format + ":  " + text));
