@@ -409,6 +409,12 @@ MySQL知识点&面试题总结</a>
 <a href="https://github.com/lzhjavagithub/JavaStudy/blob/master/doc/database/Redis/redis-questions-01.md">
 Redis知识点&面试题总结</a>
 
+<a href="https://blog.csdn.net/qq_30398499/article/details/125098510?spm=1001.2014.3001.5501" target="_blank">Redis哨兵详解</a>
+
+<a href="https://blog.csdn.net/qq_30398499/article/details/125098696?spm=1001.2014.3001.5501" target="_blank">Redis安装</a>
+
+<a href="https://blog.csdn.net/qq_30398499/article/details/125103454?spm=1001.2014.3001.5501" target="_blank">Redis分片集群搭建</a>
+
 # 消息队列
 
 ## RabbitMQ
