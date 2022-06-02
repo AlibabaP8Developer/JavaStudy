@@ -1,0 +1,26 @@
+spring:
+  redis:
+#    host: 139.198.181.54
+#    port: 6379
+#    password: null
+#    lettuce:
+#      pool:
+#        max-active: 8 #最大连接
+#        max-idle: 8 #最大空闲连接
+#        min-idle: 0 #最小空闲连接
+#        max-wait: 1000ms #等待时间
+    # 配置哨兵（sentinel）集群信息
+    password: 123456
+    sentinel:
+      master: mymaster # 指定master名称
+      nodes: # 指定redis-sentinel集群信息
+        - 139.198.181.54:27001
+        - 139.198.181.54:27002
+        - 139.198.181.54:27003
+
+logging:
+  level:
+    io.lettuce.core: debug
+    com.xiaomi: debug
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss

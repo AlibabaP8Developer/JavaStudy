@@ -1,0 +1,17 @@
+spring:
+  redis:
+    cluster:
+      nodes: # 指定分片集群的每一个节点信息
+        - 139.198.181.54:7001
+        - 139.198.181.54:7002
+        - 139.198.181.54:7003
+        - 139.198.181.54:8001
+        - 139.198.181.54:8002
+        - 139.198.181.54:8003
+
+logging:
+  level:
+    io.lettuce.core: debug
+    com.xiaomi: debug
+  pattern:
+    dateformat: yyyy-MM-dd HH:mm:ss
