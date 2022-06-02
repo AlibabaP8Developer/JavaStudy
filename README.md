@@ -1,10 +1,12 @@
 # 介绍
 
+资源正在持续更新中...
+
+内容不详细一一列举，有需要可直接看代码，后续待完善后会做一期视频详细演示！！！
+
 代码里包含详细的代码示例，不懂之处可以在代码中体会理解！！！
 
-有任何疑问和意见可以在issues提问
-
-QQ群讨论：779146205
+有任何疑问和意见可以在issues提问;  QQ群讨论：779146205
 
 common：常用工具类
 
@@ -12,13 +14,7 @@ java8: java基础和Java8新特性
 
 java11： Java11新特性
 
-java-nio：NIO
-
-juc：多线程
-
-leetcode：leetcode题目案例、面试总结、整理大厂面试题
-
-springboot：springboot demo代码案例、讲义
+leetcode：leetcode题目案例、面试总结、整理阿里、腾讯、京东、百度等大厂面试题
 
 spring-boot-aliyun：整合了阿里云短信、阿里云视频点播、阿里云OSS对象存储
 
@@ -56,13 +52,10 @@ spring-cloud-gateway包含过滤器
 
 软考资源<br>
 
-资源正在持续更新中...
-
-内容不详细一一列举，有需要可直接看代码，后续待完善后会做一期视频详细演示！！！
-
 # 项目案例
 
 ## 项目一：reggie-take-out：外卖项目案例
+
 项目描述：
 
 1.springboot、mybatis plus、redis
