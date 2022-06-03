@@ -46,7 +46,7 @@ public class QRcodeZxingUtil {
 	 * @param picFormat  二维码图片格式，jpg/png
 	 * @param nfile 指定生成的路径
 	 */
-	public static void generateQRcodePic(String content, int width, int height, String picFormat, File nfile) {
+	public static String generateQRcodePic(String content, int width, int height, String picFormat, File nfile) {
 
 		Hashtable<EncodeHintType, Object> hints = new Hashtable<EncodeHintType, Object>();
 		hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
@@ -67,8 +67,10 @@ public class QRcodeZxingUtil {
 
 			// 将二位字节矩阵按照指定图片格式，写入指定文件目录，生成二维码图片
 			MatrixToImageWriter.writeToPath(bitMatrix, picFormat, file);
+			return file.toString();
 		} catch (WriterException | IOException e) {
 			e.printStackTrace();
+			return "";
 		}
 	}
 
@@ -156,7 +158,7 @@ public class QRcodeZxingUtil {
 	 *
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main11(String[] args) {
 
 		// 生成二维码，直接写到本地
 		generateQRcodePic(CONTENT, QRCODE_SIZE, QRCODE_SIZE, "jpg", new File(""));
@@ -183,5 +185,10 @@ public class QRcodeZxingUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static void main(String[] args) {
+		File file = new File("/Users/lizhenghang/Desktop");
+		QRcodeZxingUtil.generateQRcodePic("https://www.2021cn.top", 100, 100, "jpg", file);
 	}
 }

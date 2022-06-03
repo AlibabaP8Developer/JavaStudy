@@ -17,6 +17,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -24,6 +25,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @RestController
@@ -304,8 +307,28 @@ public class ToolController {
      */
     @GetMapping("/qrcode")
     public void qrcode(String info, int width, int height, HttpServletResponse response) {
-        File file = new File("/Users/lizhenghang/Desktop");
-        QRcodeZxingUtil.generateQRcodePic(info, width, height, "jpg", file);
+        LocalDateTime localDateTime = LocalDateTime.now();
+        String format = localDateTime.format(DateTimeFormatter.ofPattern("yyyyMMdd HH:mm:ss"));
+        String path = QRcodeZxingUtil.generateQRcodePic(info, width, height, "jpg", new File(""));
+        response.setContentType("APPLICATION/OCTET-STREAM");
+        response.setHeader("Content-Disposition", "attachment; filename=" + format + ".jpg");
+        OutputStream out = null;
+        try {
+            out = response.getOutputStream();
+            File ftp = ResourceUtils.getFile(path);
+            InputStream in = new FileInputStream(ftp);
+
+            // 循环取出流中的数据
+            byte[] b = new byte[100];
+            int len;
+            while ((len = in.read(b)) != -1) {
+                out.write(b, 0, len);
+            }
+            in.close();
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
