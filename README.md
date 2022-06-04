@@ -10,45 +10,17 @@
 
 common：常用工具类
 
-java8: java基础和Java8新特性
-
-java11： Java11新特性
-
 leetcode：leetcode题目案例、面试总结、整理阿里、腾讯、京东、百度等大厂面试题
 
 spring-boot-aliyun：整合了阿里云短信、阿里云视频点播、阿里云OSS对象存储
 
 happy-chat：基于Netty聊天室
 
-spring-boot-rabbitmq：springboot整合rabbit
+spring-boot-thymeleaf：SpringBoot使用Thymeleaf，实用工具类（文件处理，邮件发送，EasyPOI导入导出）
 
-spring-boot-thymeleaf：springboot整合thymeleaf，生成静态页，实用工具类（文件处理，邮件发送，EasyPOI导入导出）
+spring-boot-redis-dianping：SpringBoot中使用Redis，在项目开发中实际应用场景案例
 
-spring-boot-tool：pdf转word工具，文件上传
-
-spring-boot-starter：自定义starter demo
-
-spring-cloud-alibaba：微服务案例
-
-｜- eureka-server：集成了eureka，目前使用的nacos，eureka相关配置暂时被屏蔽了，如需使用调整注释中配置信息即可
-
-｜- feign-api：整合了feign远程调用组件
-
-｜- gateway：整合了spring cloud gateway
-
-｜- order-service：订单服务demo
-
-｜- user-service：用户服务demo
-
-｜- doc：sql脚本、nacos文档、使用说明
-
-｜- spring-boot-admin-server：服务监控指标
-
-spring-cloud-gateway包含过滤器
-
-通过网关访问方式：http://localhost:10010/order/102?authorization=admin
-
-服务监控指标：http://localhost:10000/applications
+spring-boot-tool：pdf转word工具，文件上传，文件处理
 
 软考资源<br>
 
