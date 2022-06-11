@@ -21,6 +21,5 @@ public class CommonConfig implements ApplicationContextAware {
             log.error("消息发送失败，响应码：{}， 失败原因：{}，交换机：{}，路由key：{}" , message, replyCode, replyText, exchange, routingKey);
             // 如果有需要，可以重发消息
         });
-
     }
 }

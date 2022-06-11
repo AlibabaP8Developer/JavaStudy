@@ -11,5 +11,18 @@ spring:
     # 设置preFetch值，可以控制预取消息的上线
     listener:
       simple:
+        acknowledge-mode: AUTO  # NONE, 关闭ack；manual，手动ack；auto：自动ack
         prefetch: 1 #每次只能获取一条消息，处理完成才能获取下一个消息
+        retry:
+          enabled: true # 开启消费者失败重试
+          initial-interval: 1000 # 初识的失败等待时长为1s
+          multiplier: 3 # 下次失败的等待时长倍数，下次等待时长 = multiplier * （last - interval）
+          max-attempts: 4 # 最大重试次数
+          max-interval: 10000
+          stateless: true # true无状态；false有状态，如果业务中包含事务，这里改为false
 
+logging:
+  level:
+    com.xiaomi: debug
+  pattern:
+    dateformat: yyyy-MM-dd

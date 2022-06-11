@@ -12,7 +12,7 @@ public class ConsumerApplication {
         SpringApplication.run(ConsumerApplication.class, args);
     }
 
-    @Bean
+    //@Bean
     public MessageConverter messageConverter() {
         return new Jackson2JsonMessageConverter();
     }
