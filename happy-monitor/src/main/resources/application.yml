@@ -1,0 +1,10 @@
+server:
+  port: 18801
+
+#密码，因为接口不需要权限，所以加了个密码做校验
+mySocket:
+  myPwd: jae_123
+
+logging:
+  level:
+    com.github: debug

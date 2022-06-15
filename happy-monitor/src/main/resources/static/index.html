@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实时监控</title>
+    <style>
+        .item {
+            display: flex;
+            border-bottom: 1px solid #000000;
+            justify-content: space-between;
+            width: 30%;
+            line-height: 50px;
+            height: 50px;
+        }
+
+        .item span:nth-child(2) {
+            margin-right: 10px;
+            margin-top: 15px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #55ff00;
+        }
+
+        .nowI {
+            background: #ff0000 !important;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div v-for="item in list" class="item">
+        <span>{{item.id}}.{{item.name}}</span>
+        <span :class='item.state==-1?"nowI":""'></span>
+    </div>
+</div>
+</body>
+<script src="./vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            list: [{
+                    id: 1,
+                    name: '张三',
+                    state: -1
+                },
+                {
+                    id: 2,
+                    name: '李四',
+                    state: 1
+                },
+                {
+                    id: 3,
+                    name: '王五',
+                    state: 1
+                },
+                {
+                    id: 4,
+                    name: '韩梅梅',
+                    state: 1
+                },
+                {
+                    id: 5,
+                    name: '李磊',
+                    state: 1
+                },
+            ]
+        }
+    })
+
+    var webSocket = null;
+    if ('WebSocket' in window) {
+        //创建WebSocket对象
+        webSocket = new WebSocket("ws://localhost:18801/webSocket/" + getUUID());
+
+        //连接成功
+        webSocket.onopen = function () {
+            console.log("已连接");
+            webSocket.send("消息发送测试")
+        }
+        //接收到消息
+        webSocket.onmessage = function (msg) {
+            //处理消息
+            var serverMsg = msg.data;
+            var t_id = parseInt(serverMsg)    //服务端发过来的消息，ID，string需转化为int类型才能比较
+            for (var i = 0; i < vm.list.length; i++) {
+                var item = vm.list[i];
+                if (item.id == t_id) {
+                    item.state = -1;
+                    vm.list.splice(i, 1, item)
+                    break;
+                }
+            }
+        };
+
+        //关闭事件
+        webSocket.onclose = function () {
+            console.log("websocket已关闭");
+        };
+        //发生了错误事件
+        webSocket.onerror = function () {
+            console.log("websocket发生了错误");
+        }
+    } else {
+        alert("很遗憾，您的浏览器不支持WebSocket！")
+    }
+
+    function getUUID() {    //获取唯一的UUID
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+
+            var r = Math.random() * 16 | 0,
+                v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+</script>
+</html>
