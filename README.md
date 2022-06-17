@@ -2,6 +2,8 @@
 
 资源正在持续更新中...
 
+<a href="https://github.com/lzhjavagithub/JavaStudy/wiki">Wiki</a>
+
 内容不详细一一列举，有需要可直接看代码，后续待完善后会做一期视频详细演示！！！
 
 代码里包含详细的代码示例，不懂之处可以在代码中体会理解！！！
@@ -11,18 +13,6 @@
 common：常用工具类
 
 leetcode：leetcode题目案例、面试总结、整理阿里、腾讯、京东、百度等大厂面试题
-
-spring-boot-aliyun：整合了阿里云短信、阿里云视频点播、阿里云OSS对象存储
-
-happy-chat：基于Netty聊天室
-
-spring-boot-thymeleaf：SpringBoot使用Thymeleaf，实用工具类（文件处理，邮件发送，EasyPOI导入导出）
-
-spring-boot-redis-dianping：SpringBoot中使用Redis，在项目开发中实际应用场景案例
-
-spring-boot-tool：pdf转word工具，文件上传，文件处理
-
-软考资源<br>
 
 # 项目案例
 
