@@ -21,7 +21,7 @@ spring:
   redis:
     host: 139.198.181.54
     port: 6379
-    password: null
+    password: 123456
     lettuce:
       pool:
         max-active: 8 #最大连接

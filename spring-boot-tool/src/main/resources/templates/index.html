@@ -5,7 +5,22 @@
     <title>PDF转word</title>
 </head>
 <body>
+<h1>PDF转Word</h1>
 <form th:action="@{/tool/pdfToWord}" method="post" enctype="multipart/form-data">
+    <p>
+        <span style="font-size: 25px; color: red">请再次选择一个PDF文件(必选)：</span>
+        <input th:type="file" th:name="pdf" style="width: 200px">
+    </p>
+    <p>
+        <input th:type="submit" value="开始转换">
+    </p>
+    <p>
+        <span style="color: red;font-size: 30px;font-family: 楷体">文件转换成功后手动添加.zip扩展名下载到本地解压即可</span>
+    </p>
+</form>
+
+<h1>PDF转图片</h1>
+<form th:action="@{/tool/pdfToImage}" method="post" enctype="multipart/form-data">
     <p>
         <span style="font-size: 25px; color: red">请再次选择一个PDF文件(必选)：</span>
         <input th:type="file" th:name="pdf" style="width: 200px">
