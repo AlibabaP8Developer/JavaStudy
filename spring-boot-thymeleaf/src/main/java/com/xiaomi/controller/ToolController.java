@@ -291,8 +291,10 @@ public class ToolController {
     @RequestMapping("/file")
     public String file(String info, String replaceTo) {
         if (StringUtils.isBlank(replaceTo)) {
+            // xxx-> xxx[aaa]
             FileUtil.fileNameAddTo(new File("/Users/lizhenghang/Desktop"), info);
         } else {
+            // xxx[xxx]
             FileUtil.fileNameManage(new File("/Users/lizhenghang/Desktop"), info, replaceTo);
         }
         return "ok";

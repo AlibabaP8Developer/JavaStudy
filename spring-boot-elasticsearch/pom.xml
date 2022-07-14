@@ -54,20 +54,6 @@
             <artifactId>commons-lang3</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.sgitg.sgcc.sm</groupId>
-            <artifactId>sgsm_1</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>C:\Users\baidu\Desktop\111\des\sgsm_1.0.0.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>com.sgitg.sgcc.sm</groupId>
-            <artifactId>phc-sgsm-test</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>C:\Users\baidu\Desktop\111\des\phc-sgsm-test-1.0.0.jar</systemPath>
-        </dependency>
-        <dependency>
             <groupId>com.github</groupId>
             <artifactId>encrypt</artifactId>
             <version>1.0-SNAPSHOT</version>
