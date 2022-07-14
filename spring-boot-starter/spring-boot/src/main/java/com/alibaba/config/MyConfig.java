@@ -1,11 +1,8 @@
 package com.alibaba.config;
 
-import com.alibaba.bean.Car;
 import com.alibaba.bean.Pet;
 import com.alibaba.bean.User;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -26,7 +23,7 @@ import org.springframework.context.annotation.ImportResource;
 @Import({User.class})
 @Configuration(proxyBeanMethods = true) // 这是一个配置类==配置文件
 @ConditionalOnBean(name = "tomcatPet")
-@ImportResource("classpath: beans.xml")
+@ImportResource("classpath:beans.xml")
 /**
     第二种方法：
         1 开启Car配置绑定功能
