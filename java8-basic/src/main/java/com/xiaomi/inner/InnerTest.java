@@ -1,6 +1,6 @@
 package com.xiaomi.inner;
 
-public class Test {
+public class InnerTest {
     public static void main(String[] args) {
         /*
             注意事项：
