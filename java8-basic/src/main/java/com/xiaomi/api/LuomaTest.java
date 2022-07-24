@@ -38,16 +38,52 @@ public class LuomaTest {
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
             // 字符1转换数字1
-            int number = c - 48;
-            String s = changeLuoMa(number);
+            //int number = c - 48;
+            //String s = changeLuoMa(number);
+
+            String s = changeLuoMaSwitch(c);
             sj.add(s);
         }
 
         System.out.println(sj);
     }
 
+    private static String changeLuoMaSwitch(char number) {
+        /*
+        String str = "";
+        switch (number) {
+            case '0' -> str = "";
+            case '1' -> str = "I";
+            case '2' -> str = "II";
+            case '3' -> str = "III";
+            case '4' -> str = "IV";
+            case '5' -> str = "V";
+            case '6' -> str = "VI";
+            case '7' -> str = "VII";
+            case '8' -> str = "VIII";
+            case '9' -> str = "IX";
+            default -> str = "";
+        }*/
+
+        String str = switch (number) {
+            case '0' -> "";
+            case '1' -> "I";
+            case '2' -> "II";
+            case '3' -> "III";
+            case '4' -> "IV";
+            case '5' -> "V";
+            case '6' -> "VI";
+            case '7' -> "VII";
+            case '8' -> "VIII";
+            case '9' -> "IX";
+            default -> "";
+        };
+
+        return str;
+    }
+
     private static String changeLuoMa(int number) {
-        String[] arr = {"","I","II","III","IV","V","VI","VII","VIII","IX"};
+        String[] arr = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
         return arr[number];
     }
 
