@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: dump-sql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://139.198.181.54:3306/mybatis?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      max-lifetime: 1200000
+  thymeleaf:
+    servlet:
+      content-type: text/html;
+    suffix: .html
+    prefix: classpath:/templates/
+    encoding: UTF-8
+    mode: HTML
+    cache: false
+  mvc:
+    static-path-pattern: /**
