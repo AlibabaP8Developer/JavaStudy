@@ -1,5 +1,6 @@
 package com.github.controller;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -62,6 +63,16 @@ public class DatabaseAllController extends TimerTask {
             stringBuilder.append(" --result-file=").append(savePath + fileName).append(" --default-character-set=utf8 ")
                     .append(databaseName);
 
+            if (StringUtils.isNotBlank(TABLE_NAME)) {
+                stringBuilder.append(" --tables ");
+                String[] tableName = TABLE_NAME.split(",");
+                for (int i = 0; i < tableName.length; i++) {
+                    stringBuilder.append(tableName[i]);
+                    stringBuilder.append(" ");
+                }
+            }
+
+            System.out.println("stringBuilder.append(--tables)" + stringBuilder.toString());
             Process process = Runtime.getRuntime().exec(stringBuilder.toString());
 
             InputStreamReader inputStreamReader = new InputStreamReader(process.getInputStream(), "utf8");
