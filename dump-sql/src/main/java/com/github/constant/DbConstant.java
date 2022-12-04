@@ -11,8 +11,9 @@ public class DbConstant {
     public static final String DATABASE_NAME = "jeecg-boot";
     public static final String USERNAME = "root";
     public static final String PASSWORD = "123456";
-    // 数据库备份路径
+    // 数据库备份保存路径
     public static final String PATH = "/Users/lizhenghang/Desktop/sqldump/";
-    public static final String FILE_NAME_ALL = "dump-all-table"+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")) +".sql";
+    // 数据库备份文件名
+    public static final String FILE_NAME_ALL = "dump-table"+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")) +".sql";
     public static final String FILE_NAME = "dump-simple-table"+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")) +".sql";
 }
