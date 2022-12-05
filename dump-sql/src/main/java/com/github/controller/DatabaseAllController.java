@@ -23,7 +23,16 @@ public class DatabaseAllController extends TimerTask {
     @GetMapping("test")
     public String test() {
         try {
-            DatabaseAllController.exportDatabaseTool(HOST, USERNAME, PASSWORD, PATH, FILE_NAME_ALL, DATABASE_NAME);
+            String path = "";
+            String property = System.getProperty("os.name");
+            if (property.equals("Mac OS X")) {
+                path = MAC_PATH;
+            } else if (property.toLowerCase().indexOf("win") > 0) {
+                path = WINDOWS_PATH;
+            } else {
+                path = LINUX_PATH;
+            }
+            DatabaseAllController.exportDatabaseTool(HOST, USERNAME, PASSWORD, path, FILE_NAME_ALL, DATABASE_NAME);
             return "导出数据库成功";
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -161,11 +170,20 @@ public class DatabaseAllController extends TimerTask {
      */
     public void databaseBackup() throws IOException {
         try {
+            String path = "";
+            String property = System.getProperty("os.name");
+            if (property.equals("Mac OS X")) {
+                path = MAC_PATH;
+            } else if (property.toLowerCase().indexOf("win") > 0) {
+                path = WINDOWS_PATH;
+            } else {
+                path = LINUX_PATH;
+            }
             // 备份
-            exportDatabaseTool(HOST, USERNAME, PASSWORD, PATH, FILE_NAME_ALL, DATABASE_NAME);
+            exportDatabaseTool(HOST, USERNAME, PASSWORD, path, FILE_NAME_ALL, DATABASE_NAME);
             // 恢复
 //            recover("D:/backupDatabase/qinmei.sql");
-            recover(PATH + FILE_NAME_ALL);
+            recover(path + FILE_NAME_ALL);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

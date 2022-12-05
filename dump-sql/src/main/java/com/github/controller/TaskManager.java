@@ -35,15 +35,14 @@ public class TaskManager implements ServletContextListener {
 	 */
 	public void contextInitialized(ServletContextEvent event) {
 		Calendar calendar = Calendar.getInstance();
-		calendar.set(Calendar.HOUR_OF_DAY, 9); // 控制时
-		calendar.set(Calendar.MINUTE, 18); // 控制分
-		calendar.set(Calendar.SECOND, 0); // 控制秒
+		calendar.set(Calendar.HOUR_OF_DAY, 0); // 控制时
+		calendar.set(Calendar.MINUTE, 0); // 控制分
+		calendar.set(Calendar.SECOND, 5); // 控制秒
 		Date date = calendar.getTime();
 		// 定义定时器
 		timer = new Timer("数据库表备份", true);
 		// 启动备份任务
 		timer.schedule(new DatabaseAllController(),date);
-
 	}
 
 	/**
