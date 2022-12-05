@@ -16,6 +16,5 @@ public class DbConstant {
     public static final String WINDOWS_PATH = "d:/commons/docx/sqldump/";
     public static final String LINUX_PATH = "/commons/docx//sqldump/";
     // 数据库备份文件名
-    public static final String FILE_NAME_ALL = "dump-table"+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")) +".sql";
-    public static final String FILE_NAME = "dump-simple-table"+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")) +".sql";
+    public static final String FILE_NAME_ALL = "dump-table"+ LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmm")) +".sql";
 }

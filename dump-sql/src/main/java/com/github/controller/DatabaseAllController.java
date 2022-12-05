@@ -23,8 +23,8 @@ public class DatabaseAllController extends TimerTask {
     @GetMapping("test")
     public String test() {
         try {
-            String path = "";
-            String property = System.getProperty("os.name");
+            var path = "";
+            var property = System.getProperty("os.name");
             if (property.equals("Mac OS X")) {
                 path = MAC_PATH;
             } else if (property.toLowerCase().indexOf("win") > 0) {
@@ -59,8 +59,8 @@ public class DatabaseAllController extends TimerTask {
             printWriter = new PrintWriter(new OutputStreamWriter(new FileOutputStream(savePath + fileName), "utf8"));
             StringBuilder stringBuilder = new StringBuilder();
 
-            String system = "";
-            String property = System.getProperty("os.name");
+            var system = "";
+            var property = System.getProperty("os.name");
             if ("Mac OS X".equals(property)) {
                 system = "/usr/local/mysql/bin/mysqldump";
             } else {
@@ -170,8 +170,8 @@ public class DatabaseAllController extends TimerTask {
      */
     public void databaseBackup() throws IOException {
         try {
-            String path = "";
-            String property = System.getProperty("os.name");
+            var path = "";
+            var property = System.getProperty("os.name");
             if (property.equals("Mac OS X")) {
                 path = MAC_PATH;
             } else if (property.toLowerCase().indexOf("win") > 0) {

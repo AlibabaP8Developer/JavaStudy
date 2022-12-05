@@ -19,7 +19,7 @@ public class DbTest {
             } else {
                 path = LINUX_PATH;
             }
-            new DatabaseAllController().exportDatabaseTool(HOST, USERNAME, PASSWORD, path, FILE_NAME, DATABASE_NAME);
+            new DatabaseAllController().exportDatabaseTool(HOST, USERNAME, PASSWORD, path, FILE_NAME_ALL, DATABASE_NAME);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
