@@ -93,8 +93,10 @@ public class DatabaseAllController extends TimerTask {
             printWriter.flush();
 
             if (process.waitFor() == 0) {// 0 表示线程正常终止。
+                System.out.println("导出数据库完成...");
                 return true;
             }
+            System.out.println("导出数据库完成...");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
