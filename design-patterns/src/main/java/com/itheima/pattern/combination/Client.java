@@ -1,6 +1,9 @@
 package com.itheima.pattern.combination;
 
-public class Cllient {
+/**
+ * 组合模式
+ */
+public class Client {
     public static void main(String[] args) {
         // 创建菜单树
         MenuComponent menu1 = new Menu("菜单管理", 2);
