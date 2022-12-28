@@ -3,11 +3,7 @@ package com.github.controller;
 
 import com.github.dto.Result;
 import com.github.service.IVoucherOrderService;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -19,6 +15,7 @@ import javax.annotation.Resource;
  * @author 虎哥
  * @since 2021-12-22
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/voucher-order")
 public class VoucherOrderController {

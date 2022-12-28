@@ -3,6 +3,7 @@ package com.github.controller;
 import com.github.dto.Result;
 import com.github.pojo.ShopType;
 import com.github.service.IShopTypeService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ import java.util.List;
  * @author 虎哥
  * @since 2021-12-22
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/shop-type")
 public class ShopTypeController {

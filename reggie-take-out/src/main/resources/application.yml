@@ -7,13 +7,13 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://139.198.181.54:3306/leetcode?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
+      url: jdbc:mysql://139.198.181.54:3306/hmdp?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
       username: root
-      password: 123456
+      password: Dcp#7ujm
   redis:
     host: 139.198.181.54
     port: 6379
-    password: 123456
+    password: Dcp#7ujm
   cache:
     redis:
       time-to-live: 1800000 # 设置缓存有效期

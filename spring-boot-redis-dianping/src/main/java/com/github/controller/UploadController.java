@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Slf4j
+@CrossOrigin
 @RestController
 @RequestMapping("/upload")
 public class UploadController {

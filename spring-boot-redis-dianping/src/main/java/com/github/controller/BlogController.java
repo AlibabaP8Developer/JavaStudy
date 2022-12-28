@@ -23,6 +23,7 @@ import java.util.List;
  * @author 虎哥
  * @since 2021-12-22
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/blog")
 public class BlogController {

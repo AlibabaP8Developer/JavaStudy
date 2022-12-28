@@ -5,15 +5,15 @@ spring:
     name: redis-dianping
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://139.198.181.54:3306/leetcode?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://139.198.181.54:3306/hmdp?useSSL=false&serverTimezone=UTC
     username: root
-    password: 123456
+    password: Dcp#7ujm
     hikari:
       max-lifetime: 1200000
   redis:
     host: 139.198.181.54
     port: 6379
-    password: 123456
+    password: Dcp#7ujm
     lettuce: # redis连接池
       pool:
         max-active: 10

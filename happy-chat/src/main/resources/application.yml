@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8082
 
 spring:
   application:
@@ -8,9 +8,9 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.jdbc.Driver
 #    139.198.181.54
-    url: jdbc:mysql://localhost:3306/chat?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
+    url: jdbc:mysql://139.198.181.54:3306/hmdp?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai #&zeroDateTimeBehavior=convertToNull
     username: root
-    password: 123456
+    password: Dcp#7ujm
   thymeleaf:
     servlet:
       content-type: text/html;
