@@ -1,12 +1,15 @@
 package com.github.controller;
 
 import com.github.util.CbcUtil;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
-//@RequestMapping("/test")
+@RestController
+@RequestMapping("/test")
 public class TestCBCController {
 
-//    @GetMapping("")
+    @GetMapping("")
     public void testCbc(String sm4Key, String src, String iv) {
         //String src = "I Love You";
         //String iv = CbcUtil.get32UUID();

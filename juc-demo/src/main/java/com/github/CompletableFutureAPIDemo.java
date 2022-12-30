@@ -26,8 +26,12 @@ import java.util.concurrent.TimeUnit;
  * 主动触发计算
  * public boolean complete(T value) 是否打断get方法立即返回括号值
  * 对计算结果进行处理
- * thenApply: 计算结果存在依赖关系，这两个线程串行化
- * handle: 计算结果存在依赖关系，这两个线程串行化
+ *      thenApply: 计算结果存在依赖关系，这两个线程串行化
+ *      handle: 计算结果存在依赖关系，这两个线程串行化
+ * 对计算结果进行合并
+ *      两个completionstage任务都完成后，最终能把两个任务一起交给thencombine来处理
+ *      先完成的先等着，等待其它分支任务
+ *      thencombine
  */
 public class CompletableFutureAPIDemo {
     public static void main(String[] args) {
