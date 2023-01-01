@@ -1,7 +1,5 @@
 package cn.itcast.hotel;
 
-import cn.hutool.Hutool;
-import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import cn.itcast.hotel.pojo.Hotel;
 import cn.itcast.hotel.pojo.HotelDoc;
@@ -20,7 +18,6 @@ import org.elasticsearch.client.RequestOptions;
 import org.elasticsearch.client.RestClient;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.elasticsearch.common.xcontent.XContentType;
-import org.elasticsearch.rest.RestStatus;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
