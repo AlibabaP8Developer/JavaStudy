@@ -1,0 +1,161 @@
+```java
+GET /hotel/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+
+POST /hotel/_update/2048042240
+{
+    "doc": {
+        "isAD": true
+    }
+}
+POST /hotel/_update/2003479905
+{
+    "doc": {
+        "isAD": false
+    }
+}
+POST /hotel/_update/1725781423
+{
+    "doc": {
+        "isAD": false
+    }
+}
+POST /hotel/_update/200215548
+{
+    "doc": {
+        "isAD": false
+    }
+}
+
+
+GET /hotel/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "sort": [
+    {
+      "_geo_distance": {
+        "location": {
+          "lat": 31,
+          "lon": 121
+        },
+        "order": "asc",
+        "unit": "km"
+      }
+    }
+  ]
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "match_all": {}
+  },
+  "sort": [
+    {
+      "score": {
+        "order": "desc"
+      },
+      "price": {
+        "order": "asc"
+      }
+    }
+  ]
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "all": "七天酒店"
+          }
+        }
+      ],
+      "must_not": [
+        {
+          "range": {
+            "price": {
+              "gt": 200
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "function_score": {
+      "query": {
+        "match": {
+          "brand": "如家"
+        }
+      },
+      "functions": [
+        {
+          "filter": {
+            "term": {
+              "brand": "如家"
+            }
+          },
+          "weight": 10
+        }
+      ],
+      "boost_mode": "sum"
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "geo_distance": {
+      "distance": "15km",
+      "location": "31.105797, 121.37755"
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "range": {
+      "price": {
+        "gte": 100,
+        "lte": 150
+      }
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "match": {
+      "brand": "外滩酒店"
+    }
+  }
+}
+
+GET /hotel/_search
+{
+  "query": {
+    "multi_match": {
+      "query": "7天酒店",
+      "fields": ["brand","name"]
+    }
+  }
+}
+
+```

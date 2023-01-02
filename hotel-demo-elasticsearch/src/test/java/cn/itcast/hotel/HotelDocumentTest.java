@@ -142,7 +142,6 @@ public class HotelDocumentTest {
         client.bulk(request, RequestOptions.DEFAULT);
     }
 
-
     @AfterEach
     public void tearDown() throws IOException {
         this.client.close();

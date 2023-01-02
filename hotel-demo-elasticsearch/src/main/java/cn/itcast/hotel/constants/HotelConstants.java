@@ -5,23 +5,48 @@ public class HotelConstants {
              {
                "mappings": {
                  "properties": {
-                   "info":{
-                     "type": "text",
-                     "analyzer": "ik_smart"
-                   },
-                   "email":{
-                     "type": "keyword",
-                     "index": "false"
+                   "id": {
+                     "type": "keyword"
                    },
                    "name":{
-                     "properties": {
-                       "firstName": {
-                         "type": "keyword"
-                       },
-                       "lastName": {
-                         "type": "keyword"
-                       }
-                     }
+                     "type": "text",
+                     "analyzer": "ik_max_word",
+                     "copy_to": "all"
+                   },
+                   "address":{
+                     "type": "keyword",
+                     "index": false
+                   },
+                   "price":{
+                     "type": "integer"
+                   },
+                   "score":{
+                     "type": "integer"
+                   },
+                   "brand":{
+                     "type": "keyword",
+                     "copy_to": "all"
+                   },
+                   "city":{
+                     "type": "keyword",
+                     "copy_to": "all"
+                   },
+                   "starName":{
+                     "type": "keyword"
+                   },
+                   "business":{
+                     "type": "keyword"
+                   },
+                   "location":{
+                     "type": "geo_point"
+                   },
+                   "pic":{
+                     "type": "keyword",
+                     "index": false
+                   },
+                   "all":{
+                     "type": "text",
+                     "analyzer": "ik_max_word"
                    }
                  }
                }

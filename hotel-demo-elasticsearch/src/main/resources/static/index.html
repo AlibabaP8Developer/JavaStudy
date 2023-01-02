@@ -364,7 +364,7 @@
 
         axios.post("/hotel/list", params)
           .then(resp => {
-            this.hotels = resp.data.hotels;
+            this.hotels = resp.data.hotelDocs;
             this.total = resp.data.total;
             this.totalPage = Math.floor((this.total + 5 - 1) / 5);
             if (location) {

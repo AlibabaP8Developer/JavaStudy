@@ -40,7 +40,7 @@ public class HotelIndexTest {
     @Test
     public void testCreateHotelIndex() throws IOException {
         // 1.创建request对象
-        CreateIndexRequest request = new CreateIndexRequest("heima");
+        CreateIndexRequest request = new CreateIndexRequest("hotel");
         // 2.准备请求的参数：dsl语句
         request.source(MAPPING_TEMPLATE, XContentType.JSON);
         // 3.发送请求
@@ -54,7 +54,7 @@ public class HotelIndexTest {
     @Test
     public void testDeleteHotelIndex() throws IOException {
         // 1.创建request对象
-        DeleteIndexRequest request = new DeleteIndexRequest("heima");
+        DeleteIndexRequest request = new DeleteIndexRequest("hotel");
         // 3.发送请求
         client.indices().delete(request, RequestOptions.DEFAULT);
     }
