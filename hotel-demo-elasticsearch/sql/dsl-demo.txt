@@ -1,4 +1,27 @@
-```java
+# 价格小于等于200的酒店聚合
+GET /hotel/_search
+{
+  "query": {
+    "range": {
+      "price": {
+        "lte": 200
+      }
+    }
+  },
+  "size": 0,
+  "aggs": {
+    "brandAgg": {
+      "terms": {
+        "field": "brand",
+        "size": 20,
+        "order": {
+          "_count": "asc"
+        }
+      }
+    }
+  }
+}
+
 GET /hotel/_search
 {
   "query": {
@@ -157,5 +180,3 @@ GET /hotel/_search
     }
   }
 }
-
-```
