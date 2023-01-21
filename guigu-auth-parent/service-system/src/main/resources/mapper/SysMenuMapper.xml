@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.system.mapper.SysMenuMapper">
+
+    <resultMap id="sysMenuMap" type="com.atguigu.model.system.SysMenu" autoMapping="true"></resultMap>
+
+    <!--//根据userid查找菜单权限数据-->
+    <select id="findMenuListUserId" resultMap="sysMenuMap">
+        SELECT DISTINCT
+         m.id,m.parent_id,m.name,m.type,m.path,
+         m.component,m.perms,m.icon,m.sort_value,m.status,
+         m.create_time,m.update_time,m.is_deleted
+        FROM sys_menu m
+        INNER JOIN sys_role_menu rm ON m.id=rm.menu_id
+        INNER JOIN sys_user_role ur ON rm.role_id=ur.role_id
+        WHERE ur.user_id=#{userId}
+              AND m.status = 1
+              AND rm.is_deleted = 0
+              AND ur.is_deleted = 0
+              AND m.is_deleted = 0
+    </select>
+</mapper>

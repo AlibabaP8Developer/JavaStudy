@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: sharding-jdbc-demo
+  profiles:
+    active: dev
