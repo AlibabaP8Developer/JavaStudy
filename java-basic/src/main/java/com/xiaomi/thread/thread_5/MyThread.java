@@ -1,11 +1,13 @@
 package com.xiaomi.thread.thread_5;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 /**
  * 抽奖
+ *     每次抽的过程中，不打印，抽完时一次性打印（随机）
+ *     在此次抽奖过程中，抽奖箱1总共产生了6个奖项
+ *         分别为：10，20，100，500，2，300最高奖项为300元，总计额为932元
  */
 public class MyThread extends Thread {
 
