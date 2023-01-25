@@ -1,9 +1,14 @@
-package com.github.sharding;
+package com.github.sharding.pojo;
 
-@TableName("t_user")
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
+@TableName("blog")
 @Data
 public class User {
-    @TableId(type = IdType.AUTO)
-    private Long id;
-    private String uname;
+    private Integer id;
+    private String title;
+    private Integer status;
 }
