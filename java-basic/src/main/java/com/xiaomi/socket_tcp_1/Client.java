@@ -1,9 +1,8 @@
-package com.xiaomi.socket_tcp;
+package com.xiaomi.socket_tcp_1;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
 
 public class Client {
     public static void main(String[] args) throws IOException {
