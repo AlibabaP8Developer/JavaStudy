@@ -19,12 +19,23 @@ public class StringDemo3 {
                 break;
             }
         }
-        // 在前面补0
+        // 在前面补0,补齐7位
         int count = 7 - moneyStr.length();
         for (int i = 0; i < count; i++) {
             moneyStr = "零" + moneyStr;
         }
         System.out.println(moneyStr);
+
+        // 插入单位
+        String[] arr = {"佰", "拾" , "万", "仟", "佰", "拾", "元"};
+        // 遍历moneyStr
+        // 然后把arr单位插入进去
+        String result = "";
+        for (int i = 0; i < moneyStr.length(); i++) {
+            char c = moneyStr.charAt(i);
+            result = result + c + arr[i];
+        }
+        System.out.println(result);
     }
 
     public static String getCapitalNumber(int number) {
