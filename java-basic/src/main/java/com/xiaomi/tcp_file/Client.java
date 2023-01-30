@@ -11,9 +11,8 @@ public class Client {
         // 1.创建Socket对象并连接服务器
         Socket socket = new Socket("localhost", 10000);
         // 2.写出数据
-        BufferedInputStream bis = new BufferedInputStream(new FileInputStream("/Users/lizhenghang/workspace/java/JavaStudy/java-basic/client_dir/jjj.jpeg"));
-        OutputStream os = socket.getOutputStream();
-        BufferedOutputStream bos = new BufferedOutputStream(os);
+        BufferedInputStream bis = new BufferedInputStream(new FileInputStream("/Users/lizhenghang/workspace/java/JavaStudy/java-basic/client_dir/jjj.jpg"));
+        BufferedOutputStream bos = new BufferedOutputStream(socket.getOutputStream());
         byte[] bytes = new byte[1024];
         int len;
         while ((len = bis.read(bytes)) != -1) {
@@ -25,6 +24,7 @@ public class Client {
         // 3.接收服务器的回写数据
         BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         String line = br.readLine();
+        System.out.println(line);
 
         // 4.释放资源
         socket.close();
