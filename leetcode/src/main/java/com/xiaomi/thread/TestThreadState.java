@@ -5,9 +5,6 @@ public class TestThreadState {
     public static final Object LOCK = new Object();
 
     public static void main(String[] args) {
-//        testNewRunableTerminated();
-//        testBlocked();
-
         testWaiting();
     }
 
