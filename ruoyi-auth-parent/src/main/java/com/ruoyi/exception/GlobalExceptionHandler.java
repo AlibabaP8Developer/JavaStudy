@@ -1,4 +1,4 @@
-package com.ruoyi.system.exception;
+package com.ruoyi.exception;
 
 import com.ruoyi.dto.response.Result;
 import com.ruoyi.dto.response.ResultCodeEnum;

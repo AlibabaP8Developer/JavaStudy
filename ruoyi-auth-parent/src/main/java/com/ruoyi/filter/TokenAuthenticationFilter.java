@@ -1,4 +1,4 @@
-package com.ruoyi.system.filter;
+package com.ruoyi.filter;
 
 import com.alibaba.fastjson.JSON;
 import com.ruoyi.dto.response.Result;

@@ -2,8 +2,11 @@ package com.ruoyi.system.controller;
 
 import com.ruoyi.dto.response.Result;
 import com.ruoyi.dto.vo.LoginVo;
+import com.ruoyi.log.annotation.Log;
+import com.ruoyi.log.enums.BusinessType;
+import com.ruoyi.log.enums.OperatorType;
 import com.ruoyi.pojo.system.SysUser;
-import com.ruoyi.system.exception.GuiguException;
+import com.ruoyi.exception.GuiguException;
 import com.ruoyi.system.service.SysUserService;
 import com.ruoyi.util.JwtHelper;
 import com.ruoyi.util.MD5;
@@ -25,6 +28,7 @@ public class IndexController {
     
     //login
     //{"code":20000,"data":{"token":"admin-token"}}
+    @Log(title = "登录", businessType = BusinessType.LOGIN, operatorType = OperatorType.MANAGE)
     @PostMapping("login")
     public Result login(@RequestBody LoginVo loginVo) {
         //根据username查询数据

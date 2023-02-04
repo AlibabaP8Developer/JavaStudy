@@ -1,7 +1,7 @@
 package com.ruoyi.system.service.impl;
 
 import com.ruoyi.pojo.system.SysUser;
-import com.ruoyi.system.custom.CustomUser;
+import com.ruoyi.custom.CustomUser;
 import com.ruoyi.system.service.SysMenuService;
 import com.ruoyi.system.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;

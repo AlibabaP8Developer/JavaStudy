@@ -1,4 +1,4 @@
-package com.ruoyi.system.exception;
+package com.ruoyi.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

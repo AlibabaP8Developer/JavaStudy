@@ -1,4 +1,4 @@
-package com.ruoyi.system.custom;
+package com.ruoyi.custom;
 
 import com.ruoyi.util.MD5;
 import org.springframework.security.crypto.password.PasswordEncoder;

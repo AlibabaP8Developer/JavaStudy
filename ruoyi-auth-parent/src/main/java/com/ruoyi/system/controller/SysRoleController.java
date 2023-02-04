@@ -8,7 +8,7 @@ import com.ruoyi.dto.vo.SysRoleQueryVo;
 import com.ruoyi.log.annotation.Log;
 import com.ruoyi.log.enums.BusinessType;
 import com.ruoyi.pojo.system.SysRole;
-import com.ruoyi.system.exception.GuiguException;
+import com.ruoyi.exception.GuiguException;
 import com.ruoyi.system.service.SysRoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

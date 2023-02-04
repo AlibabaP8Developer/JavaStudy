@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ruoyi.dto.vo.AssginMenuVo;
 import com.ruoyi.dto.vo.RouterVo;
-import com.ruoyi.system.exception.GuiguException;
+import com.ruoyi.exception.GuiguException;
 import com.ruoyi.system.mapper.SysMenuMapper;
 import com.ruoyi.system.mapper.SysRoleMenuMapper;
 import com.ruoyi.pojo.system.SysMenu;

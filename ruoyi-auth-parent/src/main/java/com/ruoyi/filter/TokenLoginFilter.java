@@ -1,11 +1,11 @@
-package com.ruoyi.system.filter;
+package com.ruoyi.filter;
 
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ruoyi.dto.response.Result;
 import com.ruoyi.dto.response.ResultCodeEnum;
 import com.ruoyi.dto.vo.LoginVo;
-import com.ruoyi.system.custom.CustomUser;
+import com.ruoyi.custom.CustomUser;
 import com.ruoyi.system.service.LoginLogService;
 import com.ruoyi.util.IpUtil;
 import com.ruoyi.util.JwtHelper;

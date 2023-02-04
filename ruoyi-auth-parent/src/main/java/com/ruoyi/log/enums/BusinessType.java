@@ -50,4 +50,9 @@ public enum BusinessType {
      * 清空数据
      */
     CLEAN,
+
+    /**
+     * 登录
+     */
+    LOGIN
 }

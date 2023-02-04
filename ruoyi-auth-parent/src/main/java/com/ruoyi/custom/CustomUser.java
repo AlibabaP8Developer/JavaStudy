@@ -1,4 +1,4 @@
-package com.ruoyi.system.custom;
+package com.ruoyi.custom;
 
 import com.ruoyi.pojo.system.SysUser;
 import org.springframework.security.core.GrantedAuthority;

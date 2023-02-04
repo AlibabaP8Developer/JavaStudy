@@ -1,8 +1,8 @@
 package com.ruoyi.config;
 
-import com.ruoyi.system.custom.CustomMd5Password;
-import com.ruoyi.system.filter.TokenAuthenticationFilter;
-import com.ruoyi.system.filter.TokenLoginFilter;
+import com.ruoyi.custom.CustomMd5Password;
+import com.ruoyi.filter.TokenAuthenticationFilter;
+import com.ruoyi.filter.TokenLoginFilter;
 import com.ruoyi.system.service.LoginLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
