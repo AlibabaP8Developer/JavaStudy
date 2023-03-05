@@ -1,7 +1,7 @@
 package com.itheima.interview;
 
 /**
- * 递归方式遍历前、中、后序遍历
+ * 遍历前、中、后序遍历
  */
 public class TreeTraversal {
     public static void main(String[] args) {
@@ -14,11 +14,11 @@ public class TreeTraversal {
          */
         TreeNode root = new TreeNode(  // 第一层
                 new TreeNode(
-                        new TreeNode(4), 2, null
+                        new TreeNode(4), 2, null // 第三层
                 ), // 左孩子 第二层
                 1, // 根节点
                 new TreeNode(
-                        new TreeNode(5), 3, new TreeNode(6)
+                        new TreeNode(5), 3, new TreeNode(6) // 第三层
                 ) // 右孩子 第二层
         );
         preOrder(root);// 1	 2	 4	 3	 5	 6
@@ -28,10 +28,31 @@ public class TreeTraversal {
         System.out.println();
         System.out.println("========");
         postOrder(root);// 4	2	5	6	3	1
+        System.out.println();
+        System.out.println("========");
+
+        LinkedListStack<TreeNode> stack = new LinkedListStack<>();
+
+        // 当前节点
+        TreeNode curr = root;
+        while (curr != null || !stack.isEmpty()) {
+            if (curr != null) {
+                System.out.println("go:" + curr.val);
+                // 压入栈，为了记住回来的路径
+                stack.push(curr);
+                curr = curr.left;
+            } else {
+                TreeNode pop = stack.pop();
+                System.out.println("come:" + pop.val);
+                curr = pop.right;
+            }
+        }
     }
 
+
     /**
-     * 前序遍历
+     * 前序遍历 递归方式
+     *
      * @param node
      */
     public static void preOrder(TreeNode node) {
@@ -45,7 +66,8 @@ public class TreeTraversal {
     }
 
     /**
-     * 中序遍历
+     * 中序遍历 递归方式
+     *
      * @param node
      */
     public static void inOrder(TreeNode node) {
@@ -59,7 +81,8 @@ public class TreeTraversal {
     }
 
     /**
-     * 后序遍历
+     * 后序遍历 递归方式
+     *
      * @param node
      */
     public static void postOrder(TreeNode node) {
