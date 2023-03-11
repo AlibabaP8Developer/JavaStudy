@@ -2,6 +2,10 @@ package com.itheima.interview;
 
 /**
  * 遍历前、中、后序遍历
+ * <p>
+ * 您的 api 密钥已成功生成，请一定保留它，因为它只会显示一次，
+ * 不会存储在 sms-activate 服务器上。恢复它是不可能的，只能创建一个新的。
+ * c04b6A77d200125c013598137d1f472b
  */
 public class TreeTraversal {
     public static void main(String[] args) {
@@ -35,7 +39,7 @@ public class TreeTraversal {
 
         // 当前节点
         TreeNode curr = root;
-        while (curr != null || !stack.isEmpty()) {
+        /*while (curr != null || !stack.isEmpty()) {
             if (curr != null) {
                 System.out.println("go:" + curr.val);
                 // 压入栈，为了记住回来的路径
@@ -45,6 +49,36 @@ public class TreeTraversal {
                 TreeNode pop = stack.pop();
                 System.out.println("come:" + pop.val);
                 curr = pop.right;
+            }
+        }*/
+
+        System.out.println("！=========");
+        TreeNode pop = null;
+        while (curr != null || !stack.isEmpty()) {
+            if (curr != null) {
+                System.out.println("before:" + curr.val);
+                // 压入栈，为了记住回来的路径
+                stack.push(curr);
+                curr = curr.left;
+            } else {
+                // 栈顶元素
+                TreeNode peek = stack.peek();
+                // 没有右子树
+                if (peek.right == null) {
+                    System.out.println("middle:" + peek.val);
+                    pop = stack.pop();
+                    System.out.println("after:" + pop.val);
+                }
+                // 右子树处理完成
+                else if (peek.right == pop) {
+                    pop = stack.pop();
+                    System.out.println("after:" + pop.val);
+                }
+                // 待处理右子树
+                else {
+                    System.out.println("middle:" + peek.val);
+                    curr = peek.right;
+                }
             }
         }
     }
