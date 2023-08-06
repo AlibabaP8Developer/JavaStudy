@@ -57,7 +57,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
         queryBlogUser(blog);
         // 查询blog是否被点赞
         isBLogLiked(blog);
-        return null;
+        return Result.ok(blog);
     }
 
     private void isBLogLiked(Blog blog) {
@@ -104,6 +104,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
             boolean isSuccess = update().setSql("liked=liked+1").eq("id", id).update();
             // 3.2 保存用户到redis set集合
             if (isSuccess) {
+                // key - value - score
                 stringRedisTemplate.opsForZSet().add(key, userId.toString(), System.currentTimeMillis());
             }
         } else {
