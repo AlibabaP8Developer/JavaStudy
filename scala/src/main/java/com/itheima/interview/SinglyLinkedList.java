@@ -5,7 +5,7 @@ package com.itheima.interview;
  */
 public class SinglyLinkedList {
 
-    Node head; // head头指针
+    private Node head = null; // head头指针
 
     /**
      * 节点类
@@ -20,10 +20,28 @@ public class SinglyLinkedList {
         }
     }
 
-    public void addFirst() {
+    public void addFirst(int value) {
         // 1.链表为空
-
+        head = new Node(value, null);
         // 2.链表非空
+        head = new Node(value, head);
+    }
+
+    public void loop() {
+        Node p = head;
+        while (p != null) {
+            System.out.println(p.value);
+            p = p.next;
+        }
+    }
+
+    public static void main(String[] args) {
+        SinglyLinkedList list = new SinglyLinkedList();
+        list.addFirst(1);
+        list.addFirst(2);
+        list.addFirst(3);
+        list.addFirst(4);
+        list.loop();
     }
 }
 
