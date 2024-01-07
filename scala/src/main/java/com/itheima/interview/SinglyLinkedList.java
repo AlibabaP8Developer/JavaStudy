@@ -8,7 +8,7 @@ import java.util.function.Consumer;
  */
 public class SinglyLinkedList implements Iterable<Integer> {
 
-    private Node head = null; // head头指针
+    private Node head = null; // head头指针 可以找到第一个元素
 
     /**
      * 第三种遍历方式：实现Iterable<Integer>
@@ -63,6 +63,30 @@ public class SinglyLinkedList implements Iterable<Integer> {
         head = new Node(value, head);
     }
 
+    private Node findLast() {
+        if (head == null) { // 空链表
+            return null;
+        }
+
+        Node p;
+        for (p = head; p.next != null; p = p.next) {
+
+        }
+        return p;
+    }
+
+    public void addLast(int value) {
+        Node last = findLast();
+
+        if (last == null) {
+            addFirst(value);
+            return;
+        }
+
+        // 下一个指针指向新节点  新节点为null
+        last.next = new Node(value, null);
+    }
+
     /**
      * 遍历链表
      */
@@ -91,7 +115,34 @@ public class SinglyLinkedList implements Iterable<Integer> {
         }
     }
 
-    public static void main(String[] args) {
+    public void test() {
+        int i = 0;
+        for (Node p = head; p != null; p = p.next, i++) {
+            System.out.println(p.value + "索引是：" + i);
+        }
+    }
+
+    private Node findNode(int index) {
+        int i = 0;
+        for (Node p = head; p != null; p = p.next, i++) {
+            if (i == index) {
+                return p;
+            }
+        }
+        // 没有找到
+        return null;
+    }
+
+    public int get(int index) {
+        Node node = findNode(index);
+        if (node == null) {
+            // 抛出异常
+            throw new IllegalArgumentException(String.format("index [%d]", index));
+        }
+        return node.value;
+    }
+
+    public static void main1(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
         list.addFirst(1);
         list.addFirst(2);
@@ -103,6 +154,15 @@ public class SinglyLinkedList implements Iterable<Integer> {
             System.out.println(i);
         }
 
+    }
+
+    public static void main(String[] args) {
+        SinglyLinkedList list = new SinglyLinkedList();
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        list.addLast(4);
+        list.test();
     }
 }
 
